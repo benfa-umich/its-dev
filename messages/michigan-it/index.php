@@ -1,0 +1,1 @@
+<? header("location:http://services.it.umich.edu/"); ?>

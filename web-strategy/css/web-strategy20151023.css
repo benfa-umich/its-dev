@@ -1,0 +1,256 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,400italic);
+
+nav {
+	border-radius: 0 !important;
+}
+nav:nth-of-type(2) {
+	border-top: 1px solid #003c75;
+	border-bottom: 1px solid #001b35;
+}
+
+body {
+	background-color: #eceeef;
+}
+.navbar-blue {
+	background-color: #00274c;
+	border-bottom: 1px solid #001b35;
+	padding-top:.75rem;
+	padding-bottom:.75rem;
+}
+
+/*#CollapsingNavbar .navbar-brand {
+	line-height:2rem;
+}
+#CollapsingNavbar .navbar-brand:after {
+}
+#CollapsingNavbar .nav-item {
+	line-height:1.8rem;
+}
+.navbar-divider, .navbar-nav .nav-item + .nav-item, .navbar-nav .nav-link + .nav-link {
+	margin:0;
+}
+.navbar-nav .nav-item, .navbar-nav .nav-item + .nav-item  {
+	margin:0 1rem 0 0;
+}
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .active > .nav-link:hover {
+	color:rgba(255, 255, 255, 0.5);
+}
+.navbar-dark .navbar-nav .nav-link {
+	color:rgba(255, 255, 255, 0.75);
+}
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+	color:#ffffff;
+}
+*/
+
+#approach, #strategy {
+	background-color: #fff;
+}
+.jumbotron, footer {
+	background-color: #00274c;
+}
+.jumbotron h1 {
+	color: #fff;
+}
+
+.jumbotron {
+	border-top: 1px solid #003c75;
+	color: #fff;
+	text-shadow: 1px 1px #333;
+}
+#home.jumbotron {
+	background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/hero.jpg") no-repeat center;
+	background-size: cover;
+}
+#cross-device-usability.jumbotron {
+	background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/cross-device-usability.png") no-repeat center;
+	background-size: cover;
+}
+#findability.jumbotron {
+	background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/findability.png") no-repeat center;
+	background-size: cover;
+}
+#information.jumbotron {
+	background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/information.jpg") no-repeat center;
+	background-size: cover;
+}
+#seamless-experience.jumbotron {
+	background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/seamless-experience.png") no-repeat center;
+	background-size: cover;	
+}
+#accessibility.jumbotron {
+	background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/accessibility.jpg") no-repeat center;
+	background-size: cover;
+}
+#usability.jumbotron {
+	background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/usability.jpg") no-repeat center;
+	background-size: cover;
+}
+
+.card {
+	background-color: #fff;
+}
+
+
+#priorities .card-img-top {
+	width: 100%;
+	height: 80px;
+}
+#cross-device-usability .card-img-top {
+	background: url("../img/cross-device-usability.png") no-repeat right center;
+}
+#findability .card-img-top {
+	background: url("../img/findability.png") no-repeat right center;
+}
+#information .card-img-top {
+	background: url("../img/information.jpg") no-repeat center center;
+}
+#seamless-experience .card-img-top {
+	background: url("../img/seamless-experience.png") no-repeat left center;
+}
+#accessibility .card-img-top {
+	background: url("../img/accessibility.jpg") no-repeat right center;
+}
+#usability .card-img-top {
+	background: url("../img/usability.jpg") no-repeat right center;
+}
+h1, h2, h3, .fa {
+	color: #00274c;
+}
+.nav-item .fa {
+	color: #fff;
+}
+#approach .row>div {
+	margin-bottom: 1em;
+}
+footer {
+	border-top: 1px solid #003c75;
+	padding: 2em 0;
+	color: #ddd;
+}
+a.btn, #breadcrumb a {
+	text-decoration: none;
+}
+footer a:after {
+	content: none !important;
+}
+.cross-callout-y {
+	margin-top: -2rem;
+}
+.cross-callout-y .lead {
+	font-family: 'PT Serif', serif;
+	font-style: italic;
+}
+.cross-callout-b {
+	margin-bottom: -4rem;
+}
+.cross-callout-b .lead {
+	font-family: 'PT Serif', serif;
+	font-style: italic;
+}
+
+section.resources {
+	padding-top:4rem !important;
+	background-color: #fff;
+}
+
+.card-header + .list-group > .list-group-item:first-child {
+	border-top:0;
+}
+.card-footer {
+	background-color: #fdfdfd;
+}
+nav.bg-blue {
+	background-color: #00274c;
+}
+nav.bg-blue a {
+	color: #fff;
+}
+nav button {
+	color: #fff;
+}
+a:hover {
+	text-decoration: none;
+}
+a[href^="http"]:after {
+	content: " \f08e";
+	font-family: FontAwesome;
+	font-size: 0.6em;
+	vertical-align: middle;
+}
+a.btn:after {
+	content: none;
+}
+#breadcrumb {
+	background-color: #00274c;
+	border-bottom: 1px solid #001b35;
+}
+#breadcrumb a {
+	color: #fff;
+}
+.breadcrumb {
+	background-color: #00274c;
+	margin-bottom: 0;
+}
+#breadcrumb .active {
+	color: #ccc;
+}
+.label a {
+	color: #fff;
+}
+.label a:hover {
+	text-decoration: none;
+}
+.jumbotron a {
+	color: #fff;
+	text-decoration: underline;
+}
+.list-group-item {
+	margin-left: 2rem;
+}
+.list-group-item:last-child {
+	border-bottom:0;
+}
+/*section a {
+	text-decoration: underline;
+}*/
+
+.feedback {
+	max-width:149px;
+}
+
+ul.nav {
+	white-space: nowrap;
+	overflow-x: auto;
+}
+ul.nav li {
+	display: inline-block;
+	float: none;
+}
+#lead {
+	background-color: #fff;
+}
+.bg-gray {
+	background-color: #eceeef;
+}

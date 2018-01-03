@@ -1,0 +1,404 @@
+/**
+ * @file
+ * Layout Styling (DIV Positioning)
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout is based on the Zen Columns layout method.
+ *   http://drupal.org/node/201428
+ *
+ * Only CSS that affects the layout (positioning) of major elements should be
+ * listed here.  Such as:
+ *   display, position, float, clear, width, height, min-width, min-height
+ *   margin, border, padding, overflow
+ */
+
+
+body {
+}
+
+h1 {
+	margin:10px 0 .5em 0;
+	font-size:2.75em;
+	font-family:Antonio,'Arial Narrow',Arial;
+	font-weight:normal;
+	color:#00274c;
+	text-transform:uppercase;
+	letter-spacing:-.025em;
+	line-height:1.2em;
+}
+h2 {
+	margin:.75em 0 .5em 0;
+	font-size:2em;
+	font-family:Antonio,'Arial Narrow',Arial;
+	font-weight:normal;
+	color:#465d85;
+	text-transform:uppercase;
+	letter-spacing:-.025em;
+	line-height:1.2em;
+}
+h3 {
+	margin:.75em 0 .5em 0;
+	font-size:1.75em;
+	font-family:Antonio,'Arial Narrow',Arial;
+	font-weight:normal;
+	color:#555555;
+	text-transform:uppercase;
+	letter-spacing:-.025em;
+	line-height:1.2em;
+}
+h4 {
+	margin:.75em 0 .5em 0;
+	font-size:1.5em;
+	font-family:Antonio,'Arial Narrow',Arial;
+	font-weight:normal;
+	text-transform:uppercase;
+	letter-spacing:-.025em;
+	line-height:1.2em;
+}
+
+p {
+/*	margin-top:0;*/
+}
+
+/*
+ * Default Page Link Colors
+ */
+a:link {
+	color:#0000ff;
+}
+a:visited {
+	color:#9933cc;
+}
+a:hover {
+	color:#cc3300;
+}
+a:active {
+	color:#cc9933;
+}
+
+#page-wrapper, .region-bottom {
+}
+
+#page {
+}
+
+/* Header */
+
+#header {
+}
+#header .section {
+}
+
+.region-header {
+}
+
+/* Main Wrapper (container for everything else) */
+
+#main-wrapper {
+	position:relative;
+	margin:10px;
+	padding:0;
+
+	/*IE-only - it needs the extra padding due to the shadows we're adding in page-backgrounds.css*/
+	padding-left:20px\9;
+}
+#main {
+}
+
+/* Content */
+
+#content, .no-sidebars #content {
+  float: left; /* LTR */
+  width: 940px;
+  margin-left: 0; /* LTR */
+  margin-right: -940px; /* LTR */ /* Negative value of #content's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
+  border-left:1px solid #cccccc;
+}
+
+.sidebar-first #content {
+	width:680px;
+	margin-left:190px; /* LTR */ /* The width of .region-sidebar-first. */
+	margin-right: -940px; /* LTR */ /* Negative value of #content's width + left margin. */
+	padding:15px;
+}
+
+/*styles for when only the second sidebar exists:*/
+
+.sidebar-second #content {
+  width: 690px;
+  margin-left: 0; /* LTR */
+  margin-right: -690px; /* LTR */ /* Negative value of #content's width + left margin. */
+}
+
+.two-sidebars #content {
+  width: 520px;
+  margin-left: 160px; /* LTR */ /* The width of .region-sidebar-first */
+  margin-right: -760px; /* LTR */ /* Negative value of #content's width + left margin. */
+}
+
+#content .section {
+  margin: 0;
+  padding: 0;
+}
+
+
+.building-status {
+	border-collapse:collapse;
+}
+.building-status th {
+	padding:.5em 1em .5em 1em;
+	background:#ebebeb;
+	border-top:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+	vertical-align:top;
+	text-align:left;
+}
+.building-status a {
+	display:block;
+}
+.building-status th a:link, .building-status th a:visited {
+	color:#333333;
+	text-decoration:none;
+}
+.building-status th a:hover {
+	color:#cc3300;
+	text-decoration:underline;
+}
+.building-status td {
+	padding:.5em 1em .5em 1em;
+	background:#ffffff;
+	border-bottom:1px solid #cccccc;
+	vertical-align:top;
+	text-align:left;
+}
+.building-status td.views-field-field-status,
+.building-status td.views-field-field-last-updated {
+	white-space:nowrap;
+}
+
+.field-name-field-address,
+.field-name-field-status,
+.field-name-field-est-comp-date,
+.field-name-field-last-updated,
+.field-name-field-details {
+	margin-top:1em;
+}
+
+
+/*
+ * Navigation
+ */
+#navigation {
+  float: left; /* LTR */
+  width: 100%;
+  margin-left: 0; /* LTR */
+  margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
+  padding: 0 !important; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
+  height: 40px; /* The navigation can have any arbritrary height. We picked one
+                    that is the line-height plus 1em: 1.3 + 1 = 2.3
+                    Set this to the same value as the margin-top below. */
+}
+
+.with-navigation #content,
+.with-navigation .region-sidebar-first,
+.with-navigation .region-sidebar-second {
+  margin-top: 40px; /* Set this to the same value as the navigation height above. */
+}
+
+#navigation .section {
+}
+
+/* First sidebar */
+
+.region-sidebar-first {
+	float:left; /* LTR */
+	width:191px;
+	margin-left:0; /* LTR */
+	margin-right:-190px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
+	padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
+}
+.region-sidebar-first .section {
+	margin:0; /* LTR */
+	padding:0 15px 15px 15px;
+	border-right:1px solid #cccccc;
+}
+
+/*sidebar fist nav*/
+.region-sidebar-first ul {padding:8px 0 0 0; margin:0;}
+.region-sidebar-first ul li {list-style-image:none;list-style:none;padding:6px 0 6px 6px;border-bottom:1px solid #CCC;}
+.region-sidebar-first li a {text-decoration:none;display:block;min-width:120px !important;}
+.region-sidebar-first li:hover {background-color:#eee;}
+/*
+ * Second sidebar
+ */
+.region-sidebar-second {
+  float: left; /* LTR */
+  width: 190px;
+  margin-left: 710px; /* LTR */ /* Width of content + sidebar-first. */
+  margin-right: -940px; /* LTR */ /* Negative value of .region-sidebar-second's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */
+}
+
+.region-sidebar-second .section {
+  margin: 0 0 0 20px; /* LTR */
+  padding: 0;
+}
+
+
+
+/* Footer */
+
+.region-footer {
+	color:#ffffff;
+	background:#333333;
+	margin:10px;
+	padding:1px 20px 1px 20px;
+	font-size:.9em;
+	overflow:auto;
+}
+.region-footer p {
+}
+.region-footer ul {
+/*	list-style:none;*/
+	margin:0 0 0 10px;
+	padding:0 0 0 10px;
+}
+.region-footer a {
+	color:#ffffff;
+	text-decoration:none;
+}
+.region-footer a:hover {
+	color:#ffffff;
+	text-decoration:underline;
+}
+
+
+
+/*
+ * Page bottom
+ */
+.region-bottom /* See also the #page-wrapper declaration above that this div shares. */ {
+}
+
+/*
+ * Prevent overflowing content
+ */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-footer,
+.region-bottom {
+  overflow: visible;
+  word-wrap: break-word; /* A very nice CSS3 property */
+}
+
+/*
+ * If a div.clearfix doesn't have any content after it and its bottom edge
+ * touches the bottom of the viewport, Firefox and Safari will mistakenly
+ * place several pixels worth of space between the bottom of the div and the
+ * bottom of the viewport. Uncomment this CSS property to fix this.
+ * Note: with some over-large content, this property might cause scrollbars
+ * to appear on the #page-wrapper div.
+ */
+/*
+#page-wrapper {
+  overflow-y: hidden;
+}
+*/
+
+.cke_panel_list {background-color:#FFF !important;}
+
+.ckeditor-mod {background-color:#FFF !important;}
+
+.cke_contents {background-color:#FFF !important;}
+
+.cke_show_borders {background-color:#FFF !important;}
+
+.CSS1Compat {background-color:#FFF !important;}
+
+
+.cke_panel_list body {background-color:#FFF !important;}
+
+.ckeditor-mod body {background-color:#FFF !important;}
+
+.cke_contents body {background-color:#FFF !important;}
+
+.cke_show_borders body {background-color:#FFF !important;}
+
+.CSS1Compat body {background-color:#FFF !important;}
+
+
+/* DOUGHB CSS */
+
+#search-block-form {
+	width:200px;
+	margin:20px 0 0 0;
+	padding:0;
+}
+#edit-search-block-form--2 {
+	margin:0;
+/*	padding:10px;*/
+	padding:0;
+}
+#edit-submit--2 {
+	/*background:#006600;*/
+/*	margin:0 10px 0 0;*/
+	margin:0;
+	
+}
+
+#site-slogan {
+	width:620px;
+	float:right;
+	text-align:right;
+	font-weight:bold;
+	color:#ffffff;
+	margin:55px 10px 0 0;
+	padding:0;
+	line-height:20px;
+}
+
+ul {
+	list-style:square;
+}
+ul ul {
+	list-style:disc;
+}
+
+
+/*sidebar styles for pages like https://it.umich.edu/initiatives/cloud/content/why-cloud-services */
+.sidebar h2 {
+  font-size:110%; 
+  color:#00274c;
+  font-weight:bold; 
+  line-height:normal; 
+  margin: 0; 
+  padding: 0;
+}
+.sidebar ul {
+  margin:8px 0 0 5px;
+  padding-left:10px;
+}
+.sidebar li {
+  margin: 0 0 .1em 0;
+}
+
+/*text styles for the project statuses*/
+.Green {background-color:lime;background-color:#33cc00;padding:2px;}
+
+.Yellow {background-color:yellow;background-color:#ffcc00;padding:2px;}
+
+.Red {background-color:red;background-color:#eb0000;padding:2px;}
+/*styles for the possible asterisk text at the end of project statuses*/
+.views-field-field-status-ast-text {padding-top:8px;}
+
+/*REMOVE THE DOTS!!!*/
+
+/*zoomlinks for Shadowboxes*/
+.zoomlink {float:right;font-size:.8em;padding-right:30px;margin-bottom:10px;}

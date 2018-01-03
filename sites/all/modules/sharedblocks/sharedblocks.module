@@ -1,0 +1,300 @@
+<?php
+
+/**
+ * Shared Blocks Module
+ * @author Angie Byron and Jeff Robbins
+ *
+ * @todo
+ *  - Check for blocks that are cached per page or per user and flag them as possibly incompatible
+ *  - Add help text on publish and subscribe pages
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function sharedblocks_menu() {
+  $items = array();
+
+  $items['admin/structure/block/add-shared-block'] = array(
+    'title' => 'Add shared block',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('sharedblocks_add_block_form'),
+    'access arguments' => array('subscribe to blocks'),
+    'type' => MENU_LOCAL_ACTION,
+    'file' => 'sharedblocks.admin.inc',
+  );
+  $default_theme = variable_get('theme_default', 'bartik');
+  foreach (list_themes() as $key => $theme) {
+    if ($key != $default_theme) {
+      $items['admin/structure/block/list/' . $key . '/add-shared-block'] = array(
+        'title' => 'Add shared block',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('sharedblocks_add_block_form'),
+        'access arguments' => array('subscribe to blocks'),
+        'type' => MENU_LOCAL_ACTION,
+        'file' => 'sharedblocks.admin.inc',
+      );
+    }
+  }
+
+  // $items['admin/structure/block/manage/sharedblocks/%sharedblocks_subscription/delete'] = array(
+  //   'title' => 'Delete',
+  //   'type' => MENU_LOCAL_TASK,
+  // );
+
+  $items['admin/structure/sharedblocks/publish'] = array(
+    'title' => 'Shared Blocks',
+    'description' => 'Configuration of shared blocks.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('sharedblocks_publish_form'),
+    'access arguments' => array('publish blocks'),
+    'file' => 'sharedblocks.admin.inc',
+  );
+  $items['sharedblocks/%/%'] = array(
+    'page callback' => 'sharedblocks_publish_block',
+    'page arguments' => array(1, 2),
+    'access callback' => 'sharedblocks_publish_block_access',
+    'access arguments' => array(1, 2),
+    'type' => MENU_CALLBACK,
+    'file' => 'sharedblocks.publish.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function sharedblocks_permission() {
+  return array(
+    'publish blocks' => array(
+      'title' => t('publish blocks'),
+      'description' => t('Grants access to the Published Blocks settings page'),
+    ),
+    'subscribe to blocks' => array(
+      'title' => t('subscribe to blocks'),
+      'description' => t('Grants access to the Subscribed Blocks settings page'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function sharedblocks_block_info() {
+  $info = array();
+
+  ctools_include('export');
+  $subscriptions = ctools_export_load_object('sharedblocks', 'all');
+
+  foreach ($subscriptions as $subscriptions) {
+    $info[$subscriptions->name] = array(
+      'info' => t('@description (subscription)', array('@description' => $subscriptions->description)),
+      'cache' => DRUPAL_CACHE_CUSTOM,
+      'no publish' => TRUE,
+    );
+  }
+
+  return $info;
+}
+
+/**
+ * Implements hook_block_configure.
+ */
+function sharedblocks_block_configure($delta = '') {
+  $subscription = !empty($delta) ? sharedblocks_subscription_load($delta) : FALSE;
+
+  $form['description'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Administrative label'),
+    '#description' => t('A brief description of your block. Used on the <a href="@url">Blocks administration page</a>.', array('@url' => url('admin/structure/block'))),
+    '#default_value' => !empty($subscription->description) ? $subscription->description : '',
+    '#required' => TRUE,
+  );
+
+  $form['name'] = array(
+    '#type' => 'machine_name',
+    '#default_value' => $delta,
+    '#maxlength' => 32,
+    '#disabled' => !empty($delta),
+    '#machine_name' => array(
+      'exists' => 'sharedblocks_subscription_load',
+      'source' => array('settings', 'description'),
+    ),
+    '#required' => TRUE,
+  );
+
+  $form['url'] = array(
+    '#type' => module_exists('elements') ? 'urlfield' : 'textfield',
+    '#title' => t('Subscribe URL'),
+    '#default_value' => !empty($subscription->url) ? $subscription->url : '',
+    '#description' => t('The URL to the block you wish to subscribe to, supplied by publishing site.'),
+    '#required' => TRUE,
+    '#element_validate' => array('sharedblocks_element_validate_url'),
+  );
+
+  $interval_options = array(0 => t('Never cache')) + drupal_map_assoc(array(60, 300, 600, 1200, 1800, 3600, 10800, 21600, 32400, 43200, 86400, 172800, 259200, 604800, 1209600, 2419200, 4838400, 9676800), 'format_interval');
+  $form['update_interval'] = array(
+    '#type' => 'select',
+    '#title' => t('Refresh rate'),
+    '#options' => $interval_options,
+    '#description' => t("How frequently should this block's content be updated? Note that this can only run as often as cron runs."),
+    '#default_value' => empty($subscription->update_interval) ? 3600 : $subscription->update_interval,
+  );
+
+  return $form;
+}
+
+function sharedblocks_element_validate_url(array $element, array &$form_state) {
+  if (!empty($element['#value'])) {
+    // Is the URL a valid external URL?
+    if (!valid_url($element['#value'], TRUE)) {
+      form_error($element, t('The URL %url is not valid.', array('%url' => $form_state['values']['url'])));
+    }
+    else {
+      // Does the URL return a valid shared block JSON array?
+      module_load_include('inc', 'sharedblocks', 'sharedblocks.subscribe');
+      $block_data = _sharedblocks_fetch_url($form_state['values']['url']);
+      if (empty($block_data)) {
+        form_error($element, t('Could not fetch block information from %url.', array('%url' => $form_state['values']['url'])));
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_block_save().
+ */
+function sharedblocks_block_save($delta, array $edit = array()) {
+  ctools_include('export');
+  $subscription = sharedblocks_subscription_load($delta);
+  if (!$subscription) {
+    $subscription = ctools_export_crud_new('sharedblocks');
+    $subscription->name = $edit['name'];
+  }
+  $subscription->description = $edit['description'];
+  $subscription->url = $edit['url'];
+  $subscription->update_interval = $edit['update_interval'];
+  sharedblocks_subscription_save($subscription);
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function sharedblocks_block_view($delta) {
+  $block = array();
+
+  if ($subscription = sharedblocks_subscription_load($delta)) {
+    module_load_include('inc', 'sharedblocks', 'sharedblocks.subscribe');
+    if ($data = sharedblocks_cache_get($delta)) {
+      $block = $data;
+    }
+    elseif ($data = sharedblocks_cache_refresh($delta)) {
+      // If no cached data is available, update the cache
+      $block = $data;
+    }
+  }
+
+  // Return the unserialized block data.
+  return $block;
+}
+
+function sharedblocks_form_block_admin_display_form_alter(&$form, $form_state) {
+  // @todo Alter in delete links for our blocks.
+}
+
+/**
+ * Access callback for block public callback.
+ */
+function sharedblocks_publish_block_access($module, $delta) {
+  module_load_include('inc', 'sharedblocks', 'sharedblocks.publish');
+
+  // Block must be enabled for publishing.
+  if (!sharedblocks_is_block_published($module, $delta)) {
+    return FALSE;
+  }
+
+  // If the security token is enabled, verify it matches.
+  if (variable_get('sharedblocks_require_token', 1) && (!isset($_GET['token']) || !sharedblocks_is_valid_token($_GET['token'], $module, $delta))) {
+    return FALSE;
+  }
+
+  // Must be a valid module that implements hook_block_view().
+  if (!module_exists($module) || !module_hook($module, 'block_view')) {
+    return FALSE;
+  }
+
+  // Must be a valid block.
+  $blocks = module_invoke($module, 'block_info');
+  return !empty($blocks[$delta]) && sharedblocks_is_block_publishable($module, $delta, $blocks[$delta]);
+}
+
+/**
+ *  CTOOLS HOOKS
+ */
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function sharedblocks_ctools_plugin_api($owner, $api) {
+  // Tell CTools that we support the default_sharedblocks_subscriptions API.
+  if ($owner == 'sharedblocks' && $api == 'default_sharedblocks_subscriptions') {
+    return array('version' => 1);
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function sharedblocks_ctools_plugin_directory($module, $type) {
+  // Subscribing to blocks uses the CTools Export UI plugin.
+  if ($type == 'export_ui') {
+    return 'plugins/export_ui';
+  }
+}
+
+/**
+ * Load a single subscription.
+ */
+function sharedblocks_subscription_load($name) {
+  ctools_include('export');
+  $result = ctools_export_load_object('sharedblocks', 'names', array($name));
+  return isset($result[$name]) ? $result[$name] : FALSE;
+}
+
+/**
+ * Save a single subscription.
+ */
+function sharedblocks_subscription_save($subscription) {
+  ctools_include('export');
+  ctools_export_crud_save('sharedblocks', $subscription);
+  cache_clear_all('sharedblocks:' . $subscription->name, 'cache_block');
+}
+
+/**
+ * Export a subscription.
+ */
+function sharedblocks_subscription_export($obj, $indent = '') {
+  ctools_include('export');
+  $output = ctools_export_object('sharedblocks', $obj, $indent);
+  return $output;
+}
+
+/**
+ *  FEATURES HOOKS
+ */
+
+/**
+ * Implements hook_features_export_options().
+ */
+function sharedblocks_features_export_options() {
+  $blocks = db_select('sharedblocks', 's')
+    ->fields('s', array('name', 'description'))
+    ->orderBy('description')
+    ->execute();
+  $options = array();
+  foreach ($blocks as $block) {
+    $options[$block->name] = $block->description . ' (' . $block->name . ')';
+  }
+  return $options;
+}

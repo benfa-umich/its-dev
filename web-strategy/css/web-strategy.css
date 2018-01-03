@@ -1,0 +1,322 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,400italic);
+
+nav {
+	border-radius: 0 !important;
+}
+nav:nth-of-type(2) {
+	border-top: 1px solid #003c75;
+	/*border-bottom: 1px solid #001b35;*/
+}
+body {
+	/*background-color: #eceeef;*/
+	background-color: #f2f2f2;
+	-webkit-font-smoothing: antialiased;
+}
+.img-responsive {
+	width:100%;
+}
+.navbar {
+	padding:1rem;
+}
+.navbar-blue {
+	background-color: #00274c;
+/*	border-bottom: 1px solid #001b35;*/
+}
+.navbar-blue .container {
+	padding:0;
+}
+.navbar-brand {
+	margin:0;
+}
+#approach, #strategy {
+	background-color: #fff;
+}
+.jumbotron, footer {
+	background-color: #00274c;
+}
+.jumbotron h1 {
+	color: #fff;
+}
+
+.jumbotron {
+/*	border-top: 1px solid #003c75;*/
+	color: #fff;
+	text-shadow: 1px 1px #333;
+}
+#home.jumbotron {
+	padding-top:2rem;
+	background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/hero.jpg") no-repeat center;
+	background-size: cover;
+}
+header {
+	background-color: #fff;
+}
+#overview.jumbotron {
+    background: url("../img/overview.jpg") no-repeat center;
+	background-size: cover;
+	padding: 3.66em 0 !important;
+	margin: 0;
+}
+#cross-device-usability.jumbotron {
+	/*background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/cross-device-usability.png") no-repeat center;*/
+    background: url("../img/cross-device-usability.png") no-repeat center;
+	background-size: cover;
+	padding: 3.66em 0 !important;
+	margin: 0;
+}
+#findability.jumbotron {
+	/*background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/findability.png") no-repeat center;*/
+    background: url("../img/findability.png") no-repeat center;
+	background-size: cover;
+	padding: 3.66em 0 !important;
+	margin: 0;
+}
+#consumable-information.jumbotron {
+	/*background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/information.jpg") no-repeat center;*/
+    background: url("../img/information.jpg") no-repeat center;
+	background-size: cover;
+	padding: 3.66em 0 !important;
+	margin: 0;
+}
+#seamless-experience.jumbotron {
+	/*background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/seamless-experience.png") no-repeat center;*/
+    background: url("../img/seamless-experience.png") no-repeat center;
+	background-size: cover;
+	padding: 3.66em 0 !important;
+	margin: 0;
+}
+#usability.jumbotron {
+	/*background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/usability.jpg") no-repeat center;*/
+    background: url("../img/usability.jpg") no-repeat center;
+	background-size: cover;
+	padding: 3.66em 0 !important;
+	margin: 0;
+}
+#accessibility.jumbotron {
+	/*background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/accessibility.jpg") no-repeat center;*/
+	background: url("../img/accessibility.jpg") no-repeat center;
+	background-size: cover;
+	padding: 3.33 0 !important;
+	margin: 0;
+}
+#style-guide.jumbotron {
+	/*background: linear-gradient(
+      rgba(0, 39, 76, 0.9), 
+      rgba(0, 39, 76, 0.7)
+    ), url("../img/accessibility.jpg") no-repeat center;*/
+	background: url("../img/style-guide.jpg") no-repeat center;
+	background-size: cover;
+	padding: 3em 0 !important;
+	margin: 0;
+}
+
+/* vertically centers text and image on home page at all screen sizes */
+.vertical-align {
+	display:flex;
+	align-items:center;
+}
+.vertical-align p {
+	margin-top:1rem;
+}
+
+#home.jumbotron {
+	padding-left:.93rem;
+	padding-right:.93rem;
+}
+
+.col-sm-6 {
+	padding:0;
+}
+.card {
+	margin:0 .93rem 1.75rem .93rem;
+	background-color: #fff;
+	border: 1px solid #ddd;
+}
+
+.card.block-link {
+	position:relative;
+}
+.card.block-link a {
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	text-decoration:none; /* No underlines on the link */
+	z-index:10; /* Places the link above everything else in the div */
+	background-color:#ffffff; /* Fix to make div clickable in IE */
+	opacity:0; /* Fix to make div clickable in IE */
+	filter:alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+#priorities .card-img-top {
+	width: 100%;
+	height: 80px;
+}
+#priorities a, #priorities a:hover {
+	text-decoration: none;
+	color: #373a3c;
+}
+#device-independence .card-img-top, 
+#cross-device-usability .card-img-top {
+	background: url("../img/cross-device-usability.png") no-repeat right center;
+}
+#findability .card-img-top {
+	background: url("../img/findability.png") no-repeat right center;
+}
+#information .card-img-top {
+	background: url("../img/information.jpg") no-repeat center center;
+}
+#seamless-experience .card-img-top {
+	background: url("../img/seamless-experience.png") no-repeat left center;
+}
+#accessibility .card-img-top {
+	background: url("../img/accessibility.jpg") no-repeat center;
+}
+#usability .card-img-top {
+	background: url("../img/usability.jpg") no-repeat right center;
+}
+h1, h2, h3, .fa {
+	color: #00274c;
+}
+.m-b-lg, .m-y-lg {
+    margin-bottom: 2rem !important;
+}
+h2.card-title {
+	margin-bottom: 1.5rem !important;
+}
+h3.card-title {
+	margin-bottom:1.5rem !important;
+}
+h3.card-title:last-child {
+	margin-bottom: 0 !important;
+}
+#approach .row>div {
+	margin-bottom: 1em;
+}
+footer {
+	padding: 2em 0;
+	color: #ddd;
+}
+a.btn, #breadcrumb a {
+	text-decoration: none;
+}
+footer a:after {
+	content: none !important;
+}
+
+.cross-callout-y {
+	margin-top: -2rem;
+}
+.cross-callout-y .card {
+	border: 1px solid #ddd;
+}
+.cross-callout-y .lead {
+	font-family: 'PT Serif', serif;
+	font-style: italic;
+}
+.cross-callout-b {
+	margin-bottom: -4rem;
+}
+.cross-callout-b .card {
+	border: 1px solid #ddd;
+}
+.cross-callout-b .lead {
+	font-family: 'PT Serif', serif;
+	font-style: italic;
+}
+
+#home.jumbotron a:link, #home.jumbotron a:visited {
+	color:#ffcb05;
+}
+
+section.resources {
+	padding-top:4rem !important;
+	background-color: #fff;
+}
+
+.card-header + .list-group > .list-group-item:first-child {
+	border-top:0;
+}
+.card-footer {
+	background-color: #fdfdfd;
+}
+nav.bg-blue {
+	background-color: #00274c;
+}
+nav button {
+	color: #fff;
+}
+a[href^="http"]:after {
+	content: " \f08e";
+	font-family: FontAwesome;
+	font-size: 0.6em;
+	vertical-align: middle;
+}
+.nav-back:before {
+	content: " \f053";
+	margin-right: 0.5em;
+	font-family: FontAwesome;
+	vertical-align: middle;
+}
+a.btn:after {
+	content: none;
+}
+#breadcrumb {
+/*	background-color: #00274c;
+	border-top: 1px solid #003c75;*/
+	background:#003c75;
+}
+.breadcrumb {
+/*	background-color: #00274c;*/
+	background:#003c75;
+	margin-left: -1.75em;
+	margin-bottom: 0;
+	color: #fff;
+}
+.breadcrumb a {
+	color: #fff;
+}
+.breadcrumb .active {
+	color: #ccc !important;
+}
+.label a {
+	color: #fff;
+}
+.jumbotron a {
+	color: #fff;
+}
+.list-group-item {
+	margin-left: 2rem;
+}
+.list-group-item:last-child {
+	border-bottom:0;
+}
+.feedback {
+	max-width:149px;
+}
+.nav-link, .nav-link .fa {
+	color: #fff !important;
+}
+

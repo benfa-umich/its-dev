@@ -1,0 +1,161 @@
+
+/* GET HELP ICON TEST */
+
+.region-header .globalnav ul li.get-help a:before {
+	display:inline-block;
+	content:'\F0DA'; /* caret-right */
+	content:'\F06A'; /* exclamation-circle */
+	content:'\F128'; /* question */
+	content:'\003F'; /* question mark */
+	content:'\F059'; /* question-circle */
+	width:1.25em;
+	height:1.25em;
+	margin-right:.25em;
+	font-size:1.275em;
+	font-size:1em;
+	font-family:FontAwesome;
+	font-weight:normal;
+	color:#ffcb05;
+	text-rendering:optimizelegibility;
+	-webkit-font-smoothing:antialiased;
+	text-shadow:0 0 1px rgba(255,255,255,0.3);
+	text-align:center;
+	line-height:1.25em;
+}
+.region-header .globalnav ul li.get-help li a:before {
+	width:0;
+	content:'';
+}
+.region-header .globalnav ul li.get-help a {
+/*	background:#d32f2f;*/
+}
+
+/* Updated Service Center Styles */
+
+.service-center-contact-links {
+	display: inline-block;
+	margin: 0 1em 1em 0;
+	text-align: left;
+}
+@media screen and (max-width:599px) {
+	.service-center-contact-sublinks {
+		margin:0;
+	}
+}
+
+
+/* NEWS PAGE RADIO BUTTONS */
+/*
+#views-exposed-form-news-page .form-item-field-category-value label, 
+#views-exposed-form-news-page .form-item-field-category-value label {
+	padding:0;
+	font-size:inherit;
+	line-height:inherit;
+	color:inherit;
+	border:0;
+	border-radius:0;
+	box-shadow:none;
+	vertical-align:baseline;
+	transition:none;
+}
+#views-exposed-form-news-page .form-item-field-category-value input[type=radio], 
+#views-exposed-form-news-listings-page .form-item-field-category-value input[type=radio] {
+	position:absolute;
+	left:-999px;
+}
+#views-exposed-form-news-page .bef-select-as-radios, 
+#views-exposed-form-news-listings-page .bef-select-as-radios {
+	padding:.125em .5em .125em .5em;
+}
+#views-exposed-form-news-page .form-item-field-category-value:hover, 
+#views-exposed-form-news-listings-page .form-item-field-category-value:hover {
+	color:#ca2626;
+}
+#views-exposed-form-news-page label[for=edit-field-category-value-administrativecomputing]:before, 
+#views-exposed-form-news-listings-page label[for=edit-field-category-value-administrativecomputing]:before {
+	margin-right:.25em;
+	font-size:1.35em;
+	font-family:FontAwesome;
+	text-rendering:optimizelegibility;
+	-webkit-font-smoothing:antialiased;
+	content:'\F111';
+	color:#587abc;
+	color:#7b1fa2;
+}
+#views-exposed-form-news-page label[for=edit-field-category-value-administrativecomputing]:before ~ #edit-field-category-value-administrativecomputing:checked, 
+#views-exposed-form-news-listings-page label[for=edit-field-category-value-administrativecomputing]:before ~ #edit-field-category-value-administrativecomputing:checked {
+	content:'\F058';
+}
+#views-exposed-form-news-page label[for=edit-field-category-value-researchcomputing]:before, 
+#views-exposed-form-news-listings-page label[for=edit-field-category-value-researchcomputing]:before {
+	margin-right:.25em;
+	font-size:1.35em;
+	font-family:FontAwesome;
+	text-rendering:optimizelegibility;
+	-webkit-font-smoothing:antialiased;
+	content:'\F111';
+	color:#1976d2;
+}
+#views-exposed-form-news-page #edit-field-category-value-researchcomputing:checked + label:before, 
+#views-exposed-form-news-listings-page #edit-field-category-value-researchcomputing:checked + label:before {
+	content:'\F058';
+}
+*/
+
+/* campus computing sites styles */
+
+#block-block-176 {
+	margin-bottom:2em;
+	margin-left:10px;
+}
+#block-block-176 h2 {
+	margin:.5em 0 .5em 0;
+}
+#block-block-176 h2:first-child {
+	margin-top:.2em;
+}
+#block-block-176 .wrappy {
+	padding:0 0 5px 5px !important;
+	white-space:nowrap;
+	overflow:hidden;
+	cursor:pointer;
+}
+#block-block-176 input {
+	cursor:pointer;
+}
+#block-block-176 label {
+	padding-left:3px;
+	font-weight:normal;
+	cursor:pointer;
+}
+/* computing sites left column move menu above filter */
+@media screen and (max-width:999px) {
+	.region.region-sidebar-first {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: start;
+		-webkit-align-items: flex-start;
+		align-items: flex-start;
+	}
+	#block-block-176 {
+		-webkit-box-ordinal-group: 2;
+		-moz-box-ordinal-group: 2;
+		-ms-flex-order: 2;
+		-webkit-order: 2;
+		order: 2;
+		width:100%;
+		margin:1em 10px 0 10px;
+	}
+	#block-menu-menu-also-in-placeholder-menu {
+		-webkit-box-ordinal-group: 1;
+		-moz-box-ordinal-group: 1;
+		-ms-flex-order: 1;
+		-webkit-order: 1;
+		order: 1;
+		width:100%;
+	}
+}

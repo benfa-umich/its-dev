@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+
+<markers>
+
+<marker name="Alumni Center" address="" lat="42.280109" lng="-83.73774" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Angell Hall" address="" lat="42.276752" lng="-83.740044" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Art &amp; Architecture" address="" lat="42.28931" lng="-83.717194" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Bentley Historical Library" address="" lat="42.289597" lng="-83.712227" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Bursley Hall" address="" lat="42.29377" lng="-83.720947" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="CC Little/Pharmacy" address="" lat="42.2775" lng="-83.735367" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Campus Safety Services Building (CSSB)" address="" lat="42.265179" lng="-83.743965" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Central Campus Recreation Building (CCRB)" address="" lat="42.278229" lng="-83.732727" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Chemistry" address="" lat="42.278072" lng="-83.737099" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Chrysler Center" address="" lat="42.290764" lng="-83.716728" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Clements Library" address="" lat="42.2754353" lng="-83.7379968" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Dance Building" address="" lat="42.277744" lng="-83.732460" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Duderstadt Center/Media Union" address="" lat="42.291126" lng="-83.715759" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Francois-Xavier Bagnoud" address="" lat="42.293556" lng="-83.712021" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="H. H. Dow" address="" lat="42.292946" lng="-83.715416" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Hatcher Graduate Library" address="" lat="42.27626" lng="-83.738197" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Haven Hall" address="" lat="42.276348" lng="-83.739220" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Hill Auditorium" address="" lat="42.279133" lng="-83.739067" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Mason Hall" address="" lat="42.277206" lng="-83.739265" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Matthaei Botanical Gardens" address="" lat="42.2994129" lng="-83.66213320" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Michigan League" address="" lat="42.279118" lng="-83.737556" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Michigan Union" address="" lat="42.275135" lng="-83.741516" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="North Campus Recreation Building (NCRB)" address="" lat="42.295467" lng="-83.720200" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Palmer Commons" address="" lat="42.280643" lng="-83.73381" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Pierpont Commons" address="" lat="42.291008" lng="-83.717598" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Power Center for the Performing Arts" address="" lat="42.280754" lng="-83.735741" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="President's House" address="" lat="42.275352" lng="-83.7386084" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Rackham" address="" lat="42.280834" lng="-83.738289" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Ruthven &amp; Exhibit Museums" address="" lat="42.278183" lng="-83.734337" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Shapiro Undergraduate Library" address="" lat="42.27562" lng="-83.737183" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Student Activities Building" address="" lat="42.276561" lng="-83.7425642" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Tappan Hall" address="" lat="42.275436" lng="-83.739296" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Tisch Hall" address="" lat="42.276272" lng="-83.739616" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Towsley Children's House" address="" lat="42.273331" lng="-83.733444" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Undergraduate Science Building (USB)" address="" lat="42.279873" lng="-83.735260" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="University Health Services" address="" lat="42.279739" lng="-83.73671" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="School of Nursing" address="" lat="42.284229" lng="-83.737503" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Oxford Houses" address="" lat="42.274738" lng="-83.725258" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Computer Science &amp; Engineering (Beyster)" address="" lat="42.292953" lng="-83.716354" nickname="" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+
+<marker name="East Ann Arbor Health" address="" lat="42.3084666" lng="-83.67342" nickname="umhhc" coverage="UMHS-8021X/MWireless-UMHS/MGuest-UMHS" type="UMHHC"/>
+<marker name="Medical School" address="" lat="42.284294" lng="-83.732750" nickname="umhhc" coverage="UMHS-8021X/MWireless-UMHS/MGuest-UMHS" type="UMHHC"/>
+<marker name="North Campus Research Complex (NCRC)" address="" lat="42.300022" lng="-83.706596" nickname="ncrc" coverage="UMHS-8021X/MWireless-UMHS/MGuest-UMHS" type="UMHHC"/>
+<marker name="North Campus Research Complex (NCRC)" address="" lat="42.300438" lng="-83.702278" nickname="ncrc" coverage="UMHS-8021X/MWireless-UMHS/MGuest-UMHS" type="UMHHC"/>
+<marker name="U-M Hospitals and Health Centers" address="" lat="42.283669" lng="-83.728912" nickname="umhhc" coverage="UMHS-8021X/MWireless-UMHS/MGuest-UMHS" type="UMHHC"/>
+
+<marker name="North Campus Storage Building" address="" lat="42.2985003" lng="-83.6967659" nickname="ncstorage" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Athletics Operations Center" address="" lat="42.26212" lng="-83.74071" nickname="athleticsops" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Cliff Keen Arena" address="" lat="42.26939" lng="-83.74129" nickname="keen" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Field Hockey Stadium" address="" lat="42.26308" lng="-83.7407" nickname="fieldhockey" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="MCity Modular Building" address="" lat="42.297860" lng="-83.701774" nickname="mcitymod" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Law School Academic Building (South Hall)" address="" lat="42.273022" lng="-83.7400568" nickname="lawsouth" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Auxiliary Services Building" address="" lat="42.2994129" lng="-83.6940086" nickname="auxsvcs" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Architectural Annex" address="" lat="42.2690128" lng="-83.74633310000002" nickname="archannex" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Atrium Office Center (1000 Victors Way)" address="" lat="42.2387727" lng="-83.732053" nickname="atriumctr" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Plant (Hoover Avenue Buildings A-C)" address="" lat="42.2679708" lng="-83.7460213" nickname="plantdept" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Henderson House" address="" lat="42.2718629" lng="-83.7318063" nickname="henderson" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="North Campus Housing Service Building" address="" lat="42.298412" lng="-83.695877" nickname="nchousingsvc" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="555 South Forest" address="" lat="42.275192" lng="-83.732819" nickname="forest555" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Law Quad/Lawyers Club" address="" lat="42.274372" lng="-83.740143" nickname="lawquad" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Sports Coliseum" address="" lat="42.272060" lng="-83.745934" nickname="coliseum" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Northwood I" address="" lat="42.296494" lng="-83.713913" nickname="nw1" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Northwood II" address="" lat="42.297684" lng="-83.713013" nickname="nw2" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Northwood II" address="" lat="42.297462" lng="-83.715797" nickname="nw2" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Northwood II" address="" lat="42.295906" lng="-83.715790" nickname="nw2" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Northwood III" address="" lat="42.296574" lng="-83.718628" nickname="nw3" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Golf Course Maintenance Building" address="" lat="42.260532" lng="-83.746765" nickname="golfmaint" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="309 Maynard" address="" lat="42.278728" lng="-83.741859" nickname="maynard309" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Institute for Social Research (ISR)" address="" lat="42.276669" lng="-83.743683" nickname="isr" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="777 North University" address="" lat="42.278835" lng="-83.739807" nickname="northu777" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Perry Building (ICPSR)" address="" lat="42.274563" lng="-83.745354" nickname="perry" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="2150 Cram Place" address="" lat="42.296890" lng="-83.717537" nickname="cram2150" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="523 South Division" address="" lat="42.275555" lng="-83.744087" nickname="sdiv523" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Hartwig Administration Building" address="" lat="42.268970" lng="-83.740860" nickname="hartwig" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Liberty Center (520 E. Liberty)" address="" lat="42.279228" lng="-83.742287" nickname="libertyctr" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Madison Building" address="" lat="42.274368" lng="-83.747902" nickname="madison" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="North Campus Service Building I" address="" lat="42.296772" lng="-83.697792" nickname="northcampsvc" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="North Campus Facilities Services Building" address="" lat="42.292175" lng="-83.707619" nickname="northcampfacil" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Transportation Services" address="" lat="42.266418" lng="-83.744766" nickname="transportsvcs" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="214 South State" address="" lat="42.279675" lng="-83.741058" nickname="southstate214" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Engineering Research Building (ERB)" address="" lat="42.289539" lng="-83.715179" nickname="erb" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Space Research Building (SRB)" address="" lat="42.294380" lng="-83.711624" nickname="srb" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Engineering Programs Building" address="" lat="42.293308" lng="-83.710831" nickname="epb" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Wind Tunnel Lab" address="" lat="42.293732" lng="-83.710861" nickname="windtunnel" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Wilson Center" address="" lat="42.292953" lng="-83.710838" nickname="wilsoncenter" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Lurie Engineering Center" address="" lat="42.291485" lng="-83.713791" nickname="lurieengin" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Lurie Biomedical Engineering Building" address="" lat="42.288906" lng="-83.713593" nickname="luriebiomed" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Naval Architecture &amp; Marine Engineering" address="" lat="42.293072" lng="-83.709198" nickname="navalarch" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Phoenix Memorial Laboratory" address="" lat="42.291008" lng="-83.714691" nickname="phoenixlab" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Bonisteel Interdisciplinary Research Building (BIRB)" address="" lat="42.289906" lng="-83.713524" nickname="birb" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Cooley Lab" address="" lat="42.290611" lng="-83.713684" nickname="cooleylab" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Electrical Engineering &amp; Computer Science (EECS)" address="" lat="42.292374" lng="-83.713974" nickname="eecs" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Environment &amp; Water Resources Engineering (EWRE)" address="" lat="42.292778" lng="-83.713417" nickname="ewre" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Fisher Baseball Stadium" address="" lat="42.268051" lng="-83.741852" nickname="baseball" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Gerstacker Building" address="" lat="42.289612" lng="-83.714470" nickname="gerstacker" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="G. G. Brown" address="" lat="42.293102" lng="-83.713860" nickname="ggbrown" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Industrial &amp; Operations Engineering" address="" lat="42.291080" lng="-83.713768" nickname="ioe" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Lay Automotive Lab" address="" lat="42.291851" lng="-83.713989" nickname="layauto" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="North Campus Support Facility" address="" lat="42.298428" lng="-83.701668" nickname="ncsupport" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Oosterbaan Field House" address="" lat="42.265892" lng="-83.742386" nickname="oosterbaan" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Softball Center" address="" lat="42.2659697" lng="-83.7432137" nickname="softball" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Yost Ice Arena" address="" lat="42.267609" lng="-83.741074" nickname="yost" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="406 North Ashley" address="" lat="42.284382" lng="-83.749283" nickname="northashley" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="U-M Transportation Research Institute (UMTRI)" address="" lat="42.298073" lng="-83.703163" nickname="umtri" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Lacrosse Trailer" address="" lat="42.268089" lng="-83.744614" nickname="lacrosse" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Indoor Track Building" address="" lat="42.267551" lng="-83.743782" nickname="indoortrack" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Schembechler Hall" address="" lat="42.266113" lng="-83.741142" nickname="schembechler" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Player Development Center" address="" lat="42.264591" lng="-83.745773" nickname="playerdev" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Carver Building" address="" lat="42.279255" lng="-83.742905" nickname="carver" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Weisfeld Family Golf Center" address="" lat="42.254787" lng="-83.749832" nickname="weisfeld" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="McKinley Towne Centre" address="" lat="42.279991" lng="-83.742447" nickname="mckinley" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Arbor Lakes" address="" lat="42.310894" lng="-83.675865" nickname="arborlakes" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Galleria Building" address="" lat="42.274712" lng="-83.733887" nickname="galleria" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Graham Institute" address="" lat="42.279484" lng="-83.741203" nickname="grahaminst" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Law School - Cook Law Library" address="" lat="42.273777" lng="-83.739395" nickname="cooklaw" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Lawyers' Club" address="" lat="42.274742" lng="-83.739410" nickname="lawclub" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="West Quad" address="" lat="42.274902" lng="-83.742554" nickname="westquad" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="South Quad" address="" lat="42.273674" lng="-83.742126" nickname="southquad" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="U-M Museum of Art" address="" lat="42.275417" lng="-83.739906" nickname="umma" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Fleming Administration Building" address="" lat="42.275871" lng="-83.74276" nickname="fleming" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Kelsey Museum of Archeology" address="" lat="42.276768" lng="-83.741158" nickname="kelsey" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Helen Newberry" address="" lat="42.276928" lng="-83.7416" nickname="newberry" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Betsy Barbour" address="" lat="42.2772595" lng="-83.7415517" nickname="barbour" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Student Publications Building" address="" lat="42.277081" lng="-83.742287" nickname="spb" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="College of Literature, Science, and the Arts (LSA)" address="" lat="42.276203" lng="-83.741257" nickname="lsa" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Kraus Natural Science" address="" lat="42.27808" lng="-83.738976" nickname="kraus" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="School of Dentistry" address="" lat="42.279022" lng="-83.735947" nickname="dent" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Dana Building (SNRE)" address="" lat="42.277317" lng="-83.73658" nickname="dana" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Randall Lab" address="" lat="42.276707" lng="-83.736809" nickname="randall" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="West Hall/School of Information" address="" lat="42.275806" lng="-83.736244" nickname="westhall" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="East Hall" address="" lat="42.275784" lng="-83.735199" nickname="easthall" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Dennison Building" address="" lat="42.27673" lng="-83.735092" nickname="dennison" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Modern Languages Building" address="" lat="42.279873" lng="-83.73909" nickname="mlb" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Burton Memorial Tower" address="" lat="42.279617" lng="-83.738632" nickname="burton" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Thayer Academic Building" address="" lat="42.280071" lng="-83.739967" nickname="thayer" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="North Quad" address="" lat="42.280746" lng="-83.740135" nickname="northquad" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="School of Social Work" address="" lat="42.274616" lng="-83.736229" nickname="ssw" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Martha Cook" address="" lat="42.27449" lng="-83.737984" nickname="marthacook" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Lorch Hall" address="" lat="42.273682" lng="-83.737289" nickname="lorch" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="School of Education" address="" lat="42.273888" lng="-83.736084" nickname="soe" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="East Quad" address="" lat="42.272861" lng="-83.735153" nickname="eastquad" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Law School - Hutchins Hall" address="" lat="42.273697" lng="-83.740372" nickname="hutchins" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Weill Hall" address="" lat="42.272404" lng="-83.740326" nickname="weill" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Fletcher Hall" address="" lat="42.27018" lng="-83.742767" nickname="fletcher" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Weidenbach Hall" address="" lat="42.269314" lng="-83.740852" nickname="weidenbach" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Intramural Sports Building" address="" lat="42.269409" lng="-83.742264" nickname="intramural" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Canham Natatorium" address="" lat="42.269329" lng="-83.743896" nickname="natatorium" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Physical Properties Building" address="" lat="42.269276" lng="-83.746353" nickname="physprop" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Buhr Building" address="" lat="42.270687" lng="-83.746803" nickname="buhr" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Boyer Building" address="" lat="42.269733" lng="-83.74704" nickname="boyer" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Administrative Services Building" address="" lat="42.269131" lng="-83.747147" nickname="adserv" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Institute of Continuing Legal Education (ICLE)" address="" lat="42.268543" lng="-83.748016" nickname="icle" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Crisler Arena" address="" lat="42.264988" lng="-83.746712" nickname="crisler" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Junge Family Champions Center" address="" lat="42.265495" lng="-83.74736" nickname="junge" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Stephen M. Ross Academic Center" address="" lat="42.268539" lng="-83.740891" nickname="acadctr" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Tisch Tennis Center" address="" lat="42.253536" lng="-83.743462" nickname="tisch" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Wolverine Tower" address="" lat="42.243259" lng="-83.737129" nickname="wolverine" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Soccer Stadium" address="" lat="42.252743" lng="-83.74736" nickname="soccer" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Shepherd Women's Gymnastics Training Center" address="" lat="42.252544" lng="-83.741943" nickname="shepherd" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Bahna Wrestling Center" address="" lat="42.25211" lng="-83.74308" nickname="wrestling" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Varsity Drive" address="" lat="42.236446" lng="-83.728073" nickname="varsitydrive" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Center for the Education of Women (Michigan Square)" address="" lat="42.279175" lng="-83.745171" nickname="cew" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Lane Hall" address="" lat="42.279926" lng="-83.741249" nickname="lanehall" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Stockwell Hall" address="" lat="42.278728" lng="-83.731537" nickname="stockwell" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Mosher-Jordan Hall" address="" lat="42.280006" lng="-83.731407" nickname="mosherjordan" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Alice Lloyd" address="" lat="42.281261" lng="-83.731773" nickname="alicelloyd" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Detroit Observatory" address="" lat="42.281982" lng="-83.731674" nickname="observatory" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Couzens Hall" address="" lat="42.281967" lng="-83.732903" nickname="couzens" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="North Ingalls Building" address="" lat="42.283573" lng="-83.737747" nickname="nib" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Victor Vaughn" address="" lat="42.283703" lng="-83.735039" nickname="vaughn" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Baits II" address="" lat="42.293755" lng="-83.723396" nickname="baits2" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Baits I" address="" lat="42.291214" lng="-83.722878" nickname="baits1" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="School of Music (Moore Building)" address="" lat="42.290405" lng="-83.721031" nickname="som" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Walgreen Drama Center and Stamps Auditorium" address="" lat="42.291946" lng="-83.717514" nickname="walgreen" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="CC Annex" address="" lat="42.288658" lng="-83.715157" nickname="ccannex" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="School of Information North" address="" lat="42.288952" lng="-83.714493" nickname="sinorth" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Northwood Community Center" address="" lat="42.297318" lng="-83.709084" nickname="northwoodcc" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Parking Services/Facilities Maintenance" address="" lat="42.298588" lng="-83.697906" nickname="parking" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Observatory Lodge" address="" lat="42.280148" lng="-83.730675" nickname="oblodge" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="School of Public Health, Building I" address="" lat="42.280884" lng="-83.730667" nickname="sph1" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="School of Public Health, Building II" address="" lat="42.280212" lng="-83.72995" nickname="sph2" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Mary Markley" address="" lat="42.280876" lng="-83.728874" nickname="markley" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Trotter House" address="" lat="42.274548" lng="-83.72979" nickname="trotter" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Madelon Pound Building (Ginsberg Center)" address="" lat="42.271797" lng="-83.736053" nickname="poundhouse" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="One North Main" address="" lat="42.281696" lng="-83.74894" nickname="northmain" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Ross School of Business" address="" lat="42.272381" lng="-83.737602" nickname="ross" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Life Sciences Institute" address="" lat="42.27969" lng="-83.734154" nickname="lsi" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+<marker name="Taubman Library" address="" lat="42.283581" lng="-83.734512" nickname="umhhc" coverage="MWireless/MGuest/eduroam" type="Wireless"/>
+
+</markers>

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UL meeting content type feature.
+ */
+
+include_once 'ul_meeting_content_type.features.inc';

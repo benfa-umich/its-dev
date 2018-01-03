@@ -1,0 +1,13 @@
+name = Shared Blocks
+description = "Syndicate blocks across multiple sites"
+core = 7.x
+dependencies[] = block
+dependencies[] = ctools
+configure = admin/structure/sharedblocks/publish
+
+; Information added by Drupal.org packaging script on 2014-01-25
+version = "7.x-2.0-beta3"
+core = "7.x"
+project = "sharedblocks"
+datestamp = "1390633106"
+

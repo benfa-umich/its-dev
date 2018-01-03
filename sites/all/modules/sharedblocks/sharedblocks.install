@@ -1,0 +1,113 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the sharedblocks module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function sharedblocks_schema() {
+  $schema['sharedblocks'] = array(
+    'export' => array(
+      'key' => 'name',
+      'admin_title' => 'description',
+      'identifier' => 'subscription', // Exports will be as $subscription
+      'default hook' => 'default_sharedblocks_subscription', // Function hook name.
+      'api' => array(
+        'owner' => 'sharedblocks',
+        'api' => 'default_sharedblocks_subscriptions', // Base name for api include files.
+        'minimum_version' => 1,
+        'current_version' => 1,
+      ),
+    ),
+    'fields' => array(
+      'name' => array(
+        'type' => 'varchar',
+        'length' => '32',
+        'not null' => TRUE,
+      ),
+      'description' => array(
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => TRUE,
+      ),
+      'url' => array(
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => TRUE,
+      ),
+      'update_interval' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'disp-width' => '11',
+      ),
+      'id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+        'disp-width' => '11',
+        'no export' => TRUE,
+      ),
+    ),
+    'primary key' => array('id'),
+    'unique keys' => array(
+      'name' => array('name'),
+    ),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function sharedblocks_uninstall() {
+  variable_del('sharedblocks_publish');
+  variable_del('sharedblocks_require_token');
+}
+
+/**
+ * Drop the block_data column from the sharedblocks table.
+ */
+function sharedblocks_update_7001() {
+  if (db_field_exists('sharedblocks', 'block_data')) {
+    db_drop_field('sharedblocks', 'block_data');
+  }
+}
+
+/**
+ * Drop the expiration and last_update columns from the sharedblocks table.
+ */
+function sharedblocks_update_7002() {
+  if (db_field_exists('sharedblocks', 'expiration')) {
+    db_drop_field('sharedblocks', 'expiration');
+  }
+  if (db_field_exists('sharedblocks', 'last_update')) {
+    db_drop_field('sharedblocks', 'last_update');
+  }
+}
+
+/**
+ * Filter empty values from the sharedblocks_publish array.
+ */
+function sharedblocks_update_7003() {
+  $blocks = variable_get('sharedblocks_publish', array());
+  foreach ($blocks as $module => $deltas) {
+    $blocks[$module] = array_filter($deltas);
+  }
+  $blocks = array_filter($blocks);
+  variable_set('sharedblocks_publish', $blocks);
+}
+
+/**
+ * Disable requiring the block security tokens for existing installs.
+ */
+function sharedblocks_update_7004() {
+  $blocks = variable_get('sharedblocks_publish', array());
+  $token = variable_get('sharedblocks_require_token');
+  if (!empty($blocks) && !isset($token)) {
+    variable_set('sharedblocks_require_token', 0);
+    drupal_set_message(t('The shared blocks security token requirement has been disabled in order to not break any shared blocks. You should <a href="@url">enable the security token</a> once all the subscriptions have been updated with the new URLs.', array('@url' => url('admin/structure/sharedblocks/publish'))));
+  }
+}

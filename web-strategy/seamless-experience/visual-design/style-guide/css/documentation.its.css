@@ -1,0 +1,113 @@
+/* documentation.ITS import */
+@import url("http://documentation.its.umich.edu/sites/all/themes/bootstrap_docs/css/style.css?nzetkr");
+
+/* style guide styles and overrides */
+@import url(X-rayHTML.css);
+@import url(prism.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400);
+html {
+	font-size: 16px;
+}
+body {
+	font-size: 1em;
+}
+#table-of-content {
+	padding: 2em 0;
+	background-color: #00274c;
+	color: #fff;
+	font: 300 1em 'Roboto Condensed', sans-serif;
+}
+#table-of-content .row {
+	min-height: 1px !important;
+}
+#table-of-content ol {
+	list-style-type: decimal-leading-zero;
+}
+#table-of-content li {
+	line-height: 1.5em;
+}
+#table-of-content a {
+	text-decoration: underline;
+	color: #fff;
+}
+#table-of-content h1 {
+	font: 300 3em 'Roboto Condensed', sans-serif;
+	color: #fff;
+	margin: 1em 0;
+	padding: 0;
+}
+
+main .row {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 2em;
+	padding-bottom: 2em;
+	min-height: 1px !important;
+}
+main .row:last-child {
+	border: none;
+}
+main a {
+	text-decoration: underline;
+}
+main a[href^="http"]:after {
+	content: " \f08e";
+	font-family: FontAwesome;
+	font-size: 0.6em;
+	vertical-align: middle;
+}
+main header p {
+	font: 300 1.25em 'Roboto Condensed', sans-serif;
+	color: #333;
+	line-height: 1.75em;
+}
+.category-title {
+	font: 300 3em 'Roboto Condensed', sans-serif;
+	color: #00274c;
+	margin: 0;
+	padding: 0;
+}
+#table-of-content .section-title {
+	font: 300 2em 'Roboto Condensed', sans-serif;
+	color: #333;
+	margin: 0 0 -0.25em 0;
+	padding: 0;
+	color: #fff;
+}
+
+section {
+	margin-bottom: 4em;
+}
+.section-title {
+	font: 300 2em 'Roboto Condensed', sans-serif;
+	color: #333;
+	margin: 0 0 -0.25em 0;
+	padding: 0;
+}
+header {
+	/*border-bottom: 1px solid #999;*/
+	margin-top: 1em;
+	margin-bottom: 3em;
+}
+pre {
+	border: none;
+	/*font-size: 100%*/
+}
+.grid-example div[class^="col-sm"] {
+	background-color: #efefef;
+	border-right: 2px solid #fff;
+}
+div.region.region-sidebar-first.well {
+	margin: 0;
+}
+
+div.field-name-field-basic-page-sidebar {
+	margin: 0;
+	float: none;
+	width: 100%;
+}
+.days, .hours {
+	display: table-cell;
+}
+.hours {
+	text-align: right;
+}

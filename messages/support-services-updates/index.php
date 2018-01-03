@@ -1,0 +1,1 @@
+<? header("location:https://backstage.its.umich.edu/people/groups/support-services/"); ?>

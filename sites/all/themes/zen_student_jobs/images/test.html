@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Shadow Play</title>
+	
+<style type="text/css" media="all">
+h1, h2, .fh{ margin:0 auto;width:400px;}
+div.fh{min-height:200px; background:pink; }
+
+
+/*shadow method1*/
+.shadow { width: 400px; height: 400px; 
+box-shadow: 6px 0 4px  -4px #222 , -6px 0 4px  -4px #222;   
+-moz-box-shadow: 6px 0 4px  -4px #222, -6px 0 4px  -4px #222;   
+-webkit-box-shadow: 6px 0 4px  -4px #222, -6px 0 4px  -4px #222;   
+}
+
+/*shadow method2*/
+.shadclip{overflow:hidden;padding:0 6px;}
+.shadclip .shadow{ width: 400px; height: 400px; 
+box-shadow:0 3px  3px 6px 2px #000;   
+-moz-box-shadow:0 3px 6px 2px#000;   
+-webkit-box-shadow:0 3px 6px  2px #000;   
+}
+
+</style>
+	
+</head>
+<body>
+<h1>Shadows on select sides sides</h1>
+<h2>method1</h2>
+<div class="shadow fh">your content</div>
+<h2>method2</h2>
+<div class="shadclip">
+	<div class="shadow fh">your content</div>
+</div>
+<p class="fh"> follow up content </p>
+
+
+</body>
+
+</html>

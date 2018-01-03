@@ -1,0 +1,936 @@
+/**
+ * @file
+ * Layout Styling (DIV Positioning)
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout is based on the Zen Columns layout method.
+ *   http://drupal.org/node/201428
+ *
+ * Only CSS that affects the layout (positioning) of major elements should be
+ * listed here.  Such as:
+ *   display, position, float, clear, width, height, min-width, min-height
+ *   margin, border, padding, overflow
+ */
+
+
+@font-face {
+	font-family:'Antonio';
+	font-style:normal;
+	font-weight:normal;
+	src:url(/webfonts/antonio-regular-webfont.eot);
+	src:url(/webfonts/antonio-regular-webfont.eot?) format('eot'),url(/webfonts/antonio-regular-webfont.woff) format('woff');
+}
+@font-face {
+	font-family:'FontAwesome';
+	font-style:normal;
+	font-weight:normal;
+	src:url(/sites/all/themes/bootstrap_its/webfonts/font-awesome/fonts/fontawesome-webfont.eot);
+	src:url(/sites/all/themes/bootstrap_its/webfonts/font-awesome/fonts/fontawesome-webfont.eot?) format('eot'),url(/sites/all/themes/bootstrap_its/webfonts/font-awesome/fonts/fontawesome-webfont.woff) format('woff');
+}
+
+/*
+ * Body
+ */
+body {
+}
+
+h1 {
+	margin:0 0 .5em 0;
+	font-size:2.5em;
+	font-family:Antonio,'Arial Narrow',Arial;
+	font-weight:normal;
+	color:#00274c;
+	text-transform:uppercase;
+	letter-spacing:-.025em;
+	line-height:1.2em;
+}
+h2 {
+	margin:.75em 0 .5em 0;
+	font-size:1.75em;
+	color:#40658f;
+	line-height:normal;
+}
+h3 {
+	margin:.75em 0 .5em 0;
+	font-size:1.5em;
+	color:#555555;
+	line-height:normal;
+}
+h4 {
+	margin:.75em 0 .5em 0;
+	font-size:1.25em;
+	line-height:normal;
+}
+
+p {
+/*	margin-top:0;*/
+}
+
+/*
+ * Default Page Link Colors
+ */
+a:link {
+	color:#0000ff;
+}
+a:visited {
+	color:#9933cc;
+}
+a:hover {
+	color:#cc3300;
+}
+a:active {
+	color:#cc9933;
+}
+
+#page-wrapper,
+.region-bottom {
+  min-width: 1000px; /* Don't allow the browser to make the site unreadable. */
+}
+
+#page-wrapper, .region-bottom {
+}
+
+#page {
+}
+
+/* Header */
+
+#header {
+	width:80%;
+	max-width:1280px;
+	min-width:1000px;
+	position:fixed;
+/*	top:0;*/
+	margin:0 auto 0 auto;
+}
+#header .section {
+	width:auto;
+	margin:0 10px 0 10px;
+	background:#00274c;
+/*	z-index:9999;*/
+}
+#header .section a {
+}
+
+.region-header {
+}
+
+/* Main Wrapper (container for everything else) */
+
+#main-wrapper {
+	margin:140px 10px 0 10px;
+	padding:20px;
+	/*IE-only - it needs the extra padding due to the shadows we're adding in page-backgrounds.css*/
+	padding-left:20px\9;
+}
+#main {
+}
+
+/* Content */
+#content {
+	float: left; /* LTR */
+  	width: 100%;
+	margin-left: 0; /* LTR */
+	margin-right: -100%; /* LTR */ /* Negative value of #content's width + left margin. */
+	padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
+}
+
+#content .section,
+.no-sidebars #content .section {
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar-first #content .section {
+	margin-left:190px;
+/*	border-left:1px solid #cccccc;*/
+	padding-left: 10px; /* LTR */ /* The width + left margin of .region-sidebar-first. */
+	padding-right: 0; /* LTR */
+}
+
+.sidebar-second #content .section {
+	padding-left: 0; /* LTR */
+	padding-right: 200px; /* LTR */ /* The width + right margin of .region-sidebar-second. */
+}
+
+.two-sidebars #content .section {
+	padding-left: 200px; /* The width + left margin of .region-sidebar-first. */
+	padding-right: 200px; /* The width + right margin of .region-sidebar-second. */
+}
+
+/*
+ * Navigation
+ */
+#navigation {
+  position:fixed;
+  float: left; /* LTR */
+  width:100%;
+  margin-left: 0; /* LTR */
+  margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
+  height: 0; /* The navigation can have any arbritrary height. We picked one
+                    that is the line-height plus 1em: 1.3 + 1 = 2.3
+                    Set this to the same value as the margin-top below. */
+}
+
+.with-navigation #content,
+.with-navigation .region-sidebar-first,
+.with-navigation .region-sidebar-second {
+  margin-top: 0; /* Set this to the same value as the navigation height above. */
+}
+
+#navigation .section {
+}
+
+/* First sidebar */
+.region-sidebar-first {
+	float: left; /* LTR */
+	width: 200px;
+	margin-left: 0; /* LTR */
+	margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
+	padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
+}
+
+.region-sidebar-first .section {
+	margin: 0 20px 0 0; /* LTR */
+	padding: 0;
+}
+
+#block-block-9 {
+	display:none;
+}
+
+#header ul.menu {
+	width:100%;
+	margin:0;
+	padding:0;
+	list-style:none;
+	list-style-type:none;
+	list-style-image:none;
+	background:#40658f;
+	overflow:auto;
+}
+#header ul.menu .leaf {
+	margin:0;
+	padding:0;
+	list-style:none;
+	list-style-type:none;
+	list-style-image:none;
+	overflow:auto;
+}
+#header ul.menu li {
+	float:left;
+	margin:0;
+	padding:0;
+}
+#header ul.menu li a {
+	display:block;
+	margin:0;
+	padding:10px 20px 10px 20px;
+	font-size:17px;
+	font-family:Antonio,'Arial Narrow',Arial;
+	font-weight:normal;
+	letterspacing:-1px;
+	text-transform:uppercase;
+	line-height:20px;
+	text-decoration:none;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #header ul.menu li a {
+/*        padding:12px 20px 8px 20px;*/
+    }
+}
+#header ul.menu li a:link, #header ul.menu li a:visited {
+	color:#ffffff;
+}
+#header ul.menu li a:hover {
+	background:#567daa;
+	color:#ffffff;
+}
+
+img.home-page-photo {
+	width:100%;
+	max-width:1290px;
+	height:auto;
+}
+
+#node-1 {
+	font-size:1.25em;
+	line-height:150%;
+}
+h2.block-title {
+	margin-top:0;
+}
+
+/* Second sidebar */
+.region-sidebar-second {
+  float: right; /* LTR */
+  width: 200px;
+  margin-left: -200px; /* LTR */ /* Negative value of .region-sidebar-second's width + right margin. */
+  margin-right: 0; /* LTR */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */
+}
+
+.region-sidebar-second .section {
+  margin: 0 0 0 20px; /* LTR */
+  padding: 0;
+}
+
+/*
+ * Footer
+ */
+.region-footer {
+	margin:2em 10px 10px 10px;
+	padding:20px;
+/*	background:#333333;*/
+	border-top:1px solid #cccccc;
+	overflow:auto;
+}
+.region-footer p {
+	margin:0;
+}
+.region-footer .links {
+	float:left;
+	margin:0 35px 2em 0;
+}
+.region-footer .links ul {
+	margin:0 0 0 12px;
+	padding:0 0 0 12px;
+}
+.region-footer .links ul li {
+	margin-top:.25em;
+}
+.region-footer .links .socialmedia {
+	margin:5px 0 10px 0;
+}
+.region-footer .links .socialmedia a {
+	margin-right:5px;
+}
+.region-footer .links a {
+}
+.region-footer a:link, .region-footer a:visited {
+	color:#40658f;
+	text-decoration:none;
+}
+.region-footer a:hover {
+	color:#cc3300;
+	text-decoration:underline;
+}
+.region-footer .copyright {
+	clear:both;
+}
+.region-footer .copyright a {
+	color:#757575;
+}
+
+/*
+ * Page bottom
+ */
+.region-bottom /* See also the #page-wrapper declaration above that this div shares. */ {
+}
+
+/*
+ * Prevent overflowing content
+ */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-footer,
+.region-bottom {
+  overflow: visible;
+  word-wrap: break-word; /* A very nice CSS3 property */
+}
+
+/*
+ * If a div.clearfix doesn't have any content after it and its bottom edge
+ * touches the bottom of the viewport, Firefox and Safari will mistakenly
+ * place several pixels worth of space between the bottom of the div and the
+ * bottom of the viewport. Uncomment this CSS property to fix this.
+ * Note: with some over-large content, this property might cause scrollbars
+ * to appear on the #page-wrapper div.
+ */
+/*
+#page-wrapper {
+  overflow-y: hidden;
+}
+*/
+
+/* home page photo */
+#block-block-7 p {
+	margin:0;
+}
+
+
+#block-views-what-s-happening-in-wifi-block {
+	width:31%;
+	float:left;
+}
+#block-views-what-s-happening-in-wifi-block h2 {
+	margin-top:0;
+}
+#block-views-what-s-happening-in-wifi-block .views-row {
+	margin-bottom:1em;
+}
+/* project progress bar block */
+#block-block-5 {
+	width:32%;
+	float:left;
+}
+/* project progress donut block */
+#block-block-13, #block-block-14 {
+	width:28%;
+	margin:0 5% 0 5%;
+	float:left;
+}
+#block-block-13 h2, #block-block-14 h2 {
+	margin-top:0;
+}
+#block-block-13 #canvas-holder, #block-block-14 #canvas-holder {
+	width:90%;
+	margin:0 auto 0 auto;
+}
+#block-block-13 ul.progress-legend, #block-block-14 ul.progress-legend {
+	list-style:none;
+	margin:1em 6% 2em 6%;
+	padding:0;
+}
+#block-block-13 ul.progress-legend li, #block-block-14 ul.progress-legend li {
+	margin-top:.5em;
+}
+#block-block-13 ul.progress-legend li .progress-legend-color, 
+#block-block-14 ul.progress-legend li .progress-legend-color {
+	float:left;
+	display:inline-block;
+	width:18px;
+	height:18px;
+	margin-right:5px;
+	border-radius:100%; 
+}
+#block-block-13 ul.progress-legend li .blue, 
+#block-block-14 ul.progress-legend li .blue {
+	background:#3366cc;
+}
+#block-block-13 ul.progress-legend li .red, 
+#block-block-14 ul.progress-legend li .red {
+	background:#dc3912;
+}
+#block-block-13 ul.progress-legend li .orange, 
+#block-block-14 ul.progress-legend li .orange {
+	background:#f57c00;
+}
+#block-block-13 ul.progress-legend li .green, 
+#block-block-14 ul.progress-legend li .green {
+	background:#109618;
+}
+#block-block-13 ul.progress-legend li .progress-legend-text, 
+#block-block-14 ul.progress-legend li .progress-legend-text {
+	padding-left:23px;
+}
+#block-block-13 .progress-note, #block-block-14 .progress-note {
+	margin:0 6% 0 6%;
+	font-size:.85em;
+	color:#666666;
+}
+/* home page building list */
+#block-views-ee52616928bc1a86f53eb0568cf158e7, 
+#block-views-buildings-in-progress-block {
+	width:31%;
+	float:left;
+}
+.view-recently-completed-buildings ul, 
+#block-views-ee52616928bc1a86f53eb0568cf158e7 ul, 
+#block-views-buildings-in-progress-block ul {
+	margin:0 0 0 12px;
+	padding:0 0 0 12px;
+}
+#block-views-ee52616928bc1a86f53eb0568cf158e7 .view-footer, 
+#block-views-buildings-in-progress-block .view-footer {
+	text-align:right;
+}
+
+.view-project-news ul li {
+	margin-bottom:1em;
+}
+
+.contextual-links-region {
+/*	position:static !important;*/
+}
+
+
+.buildings-photo {
+	float:left;
+	margin:0 40px 2em 0;
+}
+
+table.project-buildings td {
+	text-align:left;
+	vertical-align:top;
+}
+table.project-buildings td img {
+	margin-right:40px;
+}
+
+#building-filter {
+	margin:0 auto .5em auto;
+	font-size:1.5em;
+	line-height:40px;
+}
+#building-filter label {
+	display:inline;
+}
+#building-filter input {
+	width:320px;
+	margin:0;
+	padding:5px;
+	font-size:inherit;
+}
+
+.view-campus-wifi-building-status table.views-table, 
+.view-campus-buildings table.views-table {
+	width:100%;
+}
+.view-campus-wifi-building-status table.views-table th,
+.view-campus-wifi-building-status table.views-table td,
+.view-campus-buildings table.views-table th,
+.view-campus-buildings table.views-table td {
+	text-align:left;
+	padding:5px 10px 5px 10px;
+	background-color:inherit;
+}
+.view-campus-wifi-building-status table.views-table td.views-field-title,
+.view-campus-buildings table.views-table td.views-field-title {
+/*	text-transform:lowercase;*/
+}
+.view-campus-wifi-building-status table.views-table td.views-field-title a,
+.view-campus-buildings table.views-table td.views-field-title a {
+/*	text-transform:capitalize;*/
+}
+.view-campus-wifi-building-status table.views-table th, 
+.view-campus-buildings table.views-table th {
+	background:#40658f;
+	color:#ffffff;
+	white-space:nowrap;
+}
+.view-campus-wifi-building-status table.views-table tr.building-striped td, 
+.building-striped {
+	background:#f5f5f5;
+}
+.view-campus-wifi-building-status table.views-table th a:link, 
+.view-campus-wifi-building-status table.views-table th a:visited, 
+.view-campus-buildings table.views-table th a:link, 
+.view-campus-buildings table.views-table th a:visited {
+	color:#ffffff;
+	color:#ffcb05;
+	text-decoration:none;
+}
+.view-campus-wifi-building-status table.views-table th a:hover, 
+.view-campus-buildings table.views-table th a:hover {
+	color:#ffcb05;
+	text-decoration:underline;
+}
+.view-campus-wifi-building-status table.views-table th img, 
+.view-campus-buildings table.views-table th img {
+	padding-left:5px;
+}
+.view-campus-wifi-building-status table.views-table td, 
+.view-campus-buildings table.views-table td {
+	border-bottom:1px solid #cccccc;
+	vertical-align:top;
+}
+.view-campus-wifi-building-status .view-campus-buildings table.views-table td.active, 
+.view-campus-buildings table.views-table td.active {
+	background:inherit;
+}
+.view-campus-wifi-building-status table.views-table td.views-field-title {
+/*	white-space:nowrap;*/
+}
+.view-campus-wifi-building-status table.views-table td.views-field-field-bldg-status {
+	width:40%;
+}
+.view-campus-wifi-building-status table.views-table td.views-field-field-bldg-notes {
+	text-align:center;
+}
+.view-campus-wifi-building-status table.views-table td.views-field-field-bldg-notes .font-icon {
+	font-size:1.5em;
+	cursor:pointer;
+}
+
+.status-note {
+	margin-top:.5em;
+	font-size:.85em;
+	color:#666666;
+	line-height:normal;
+}
+
+.desktop-text .mobile-text {
+	position:absolute;
+	left:-99999px;
+}
+.desktop-text:hover {
+	color:#cc0000;
+}
+.desktop-text:hover .mobile-text {
+	display:block;
+	position:absolute;
+	left:auto;
+	width:300px;
+	padding:.5em 1em .5em 1em;
+	margin:0 0 0 -300px;
+	z-index:100;
+	background:#333333;
+	border:1px solid #333333;
+	font-size:1em;
+	color:#ffffff;
+	text-align:left;
+}
+
+.font-icon {
+	font-family:FontAwesome;
+	text-rendering:optimizelegibility;
+	-webkit-font-smoothing:antialiased;
+/*	text-shadow:0 0 1px rgba(0,0,0,0.3);*/
+/*	vertical-align:middle;*/
+}
+
+#edit-title-wrapper {
+	width:auto;
+	font-size:1.5em;
+	margin:0 auto .5em auto;
+	padding:0;
+}
+#edit-title-wrapper label, 
+#edit-title-wrapper .views-widget, 
+#edit-title-wrapper .views-widget .form-item {
+	display:inline;
+	width:auto;
+	line-height:40px;
+}
+#edit-title-wrapper label {
+	margin-right:.5em;
+}
+#edit-title-wrapper #edit-title {
+	width:400px;
+	margin:0;
+	padding:5px;
+	font-size:inherit;
+}
+
+.views-widget-filter-field_building_status_value {
+	clear:both;
+	margin:0 auto .5em auto;
+	padding:0;
+}
+.views-widget-filter-field_building_status_value label, 
+.views-widget-filter-field_building_status_value .views-widget, 
+.views-widget-filter-field_building_status_value .views-widget .form-type-select {
+	display:inline;
+	font-weight:normal;
+}
+.views-widget-filter-field_building_status_value label {
+	margin-right:.5em;
+}
+.views-widget-filter-field_building_status_value #edit-field-building-status-value {
+	margin:0;
+	font-size:inherit;
+}
+
+.view-project-blog h2.node-title {
+	margin:1em 0 .5em 0;
+}
+.view-project-blog .content {
+	margin:0 0 2em 0;
+}
+.view-project-blog .content p {
+	margin-top:0;
+}
+.field-name-field-tags {
+	margin:1.5em 0 2em 0;
+}
+.field-name-field-tags .field-label,
+.field-name-field-tags .field-items {
+	display:inline;
+} 
+.field-name-field-tags .field-item {
+	display:inline;
+	margin-left:.5em;
+	font-size:.85em;
+}
+.field-name-field-tags .field-item a {
+	display:inline-block;
+	padding:5px 10px 5px 10px;
+	background:#e5e5e5;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.field-name-field-tags .field-item a:link, .field-name-field-tags .field-item a:visited {
+	color:#333333;
+	text-decoration:none;
+}
+.field-name-field-tags .field-item a:hover {
+	color:#cc3300;
+	text-decoration:underline;
+}
+
+.center {
+	text-align:center;
+}
+
+.imagezoom {
+	display:inline-block;
+	width:400px;
+	border:1px solid #e5e5e5;
+	margin:5px;
+	padding-bottom:20px;
+	background:url('/projects/wifi-upgrade/sites/all/themes/zen_services_wifi/images/icon-zoom.png') right bottom no-repeat;
+}
+.imagezoom img {
+	width:100%;
+	height:auto;
+}
+
+a#toggle_all {
+	font-size:.85em;
+}
+a#toggle_all:link, a#toggle_all:visited {
+	color:#0000ff;
+	text-decoration:none;
+}
+a#toggle_all:hover {
+	color:#cc3300;
+	text-decoration:underline;
+}
+a#toggle_all:active {
+	color:#886b01;
+	text-decoration:underline;
+}
+
+.field-name-field-q, 
+.question {
+	margin:1em 0 0 0;
+	padding:0 0 0 15px;
+	line-height:135%;
+}
+.field-name-field-q, 
+.question {
+	display:block;
+	color:#333333;
+	background:transparent url("/projects/wifi-upgrade/sites/all/themes/zen_services_wifi/images/arrow-rt.png") no-repeat;
+	cursor:pointer;
+}
+.field-name-field-q:hover, 
+.question:hover {
+	color:#cc3300;
+	text-decoration:underline;
+}
+.open {
+	background:transparent url("/projects/wifi-upgrade/sites/all/themes/zen_services_wifi/images/arrow-dn.png") no-repeat;
+	font-weight:bold;
+	color:#333333;
+}
+.field-name-field-a, 
+.answer {
+	margin:0;
+	padding:0 0 0 15px;
+	line-height:135%;
+}
+
+
+ul {
+	list-style:square;
+}
+ul ul {
+	list-style:disc;
+}
+
+
+
+
+/* Monitor */
+@media screen and (max-width:960px) {
+}
+
+/* Tablet */
+@media screen and (max-width:839px) {
+	body {
+		margin:0;
+		background:#e5e5e5;
+		font-size:1.25em;
+	}
+	#page-wrapper, .region-bottom {
+		width:100% !important;
+		min-width:1px !important;
+	}
+	#header {
+		width:100% !important;
+		min-width:1px !important;
+		margin:0;
+		padding:0;
+		position:static;
+	}
+	#header .section {
+		margin:0;
+	}
+	#logo {
+		padding:20px !important;
+	}
+	#header img {
+		width:100%;
+		max-width:510px;
+		height:auto;
+	}
+	#header ul.menu {
+		display:none;
+	}
+	#block-block-9 {
+		display:block;
+		width:auto;
+		margin:0;
+		padding:15px 20px;
+		background:#40658f;
+		font-family:Antonio,'Arial Narrow',Arial;
+		font-size:1.75em;
+		color:#ffffff;
+		text-transform:uppercase;
+		letterspacing:-1px;
+		overflow:auto;
+	}
+	#block-block-9 p {
+		margin:0;
+	}
+	.border-menu {
+		background:url("/projects/wifi-upgrade/sites/all/themes/zen_services_wifi/images/icon-menu.png") left 2px no-repeat;
+		background-size:25px auto;
+		padding-left:35px;
+		line-height:25px;
+	}
+	#header ul.menu {
+		position:absolute;
+	}
+	#header ul.menu li {
+		float:none;
+		background:#567daa;
+	}
+	#header ul.menu li a {
+		font-size:21px;
+		padding:15px 20px;
+	}
+	#main-wrapper {
+		margin:0;
+		padding:20px;
+	}
+	#block-views-ee52616928bc1a86f53eb0568cf158e7, 
+	#block-views-buildings-in-progress-block, 
+	#block-block-5,
+	#block-block-13, 
+	#block-views-what-s-happening-in-wifi-block {
+		clear:both;
+		float:none;
+		width:auto;
+		margin:0 0 2em 0;
+		overflow:auto;
+	}
+	#block-block-13 #canvas-holder {
+		float:left;
+		width:35%;
+		margin:0 5% 0 auto;
+	}
+	#block-block-13 ul.progress-legend {
+		margin:1em 0 1em 0;
+	}
+	#block-block-13 .progress-note {
+		margin:0;
+	}
+	table.project-buildings td img {
+		display:none;
+	}
+	.view-campus-wifi-building-status table.views-table, 
+	.view-campus-buildings table.views-table {
+		width:100%;
+	}
+
+	.region-footer {
+		padding:20px 10px 20px 10px;
+	}
+	.region-footer .links {
+		float:none;
+	}
+}
+
+@media screen and (max-width:749px) {
+
+	.view-campus-wifi-building-status table.views-table th, 
+	.view-campus-wifi-building-status table.views-table td, 
+	.view-campus-buildings table.views-table th,
+	.view-campus-buildings table.views-table td {
+		display:block;
+		border:0;
+	}
+	.view-campus-wifi-building-status td.views-field-title {
+		font-weight:bold;
+	}
+	.view-campus-wifi-building-status table.views-table td.views-field-field-bldg-status {
+		width:auto;
+	}
+	.view-campus-wifi-building-status table.views-table tr, 
+	.view-campus-buildings table.views-table tr {
+		border-bottom:1px solid #cccccc;
+	}
+	.view-campus-wifi-building-status table.views-table td.views-field-field-bldg-notes {
+		font-size:inherit;
+		text-align:left;
+		cursor:pointer;
+	}
+	.view-campus-wifi-building-status table.views-table td.views-field-field-bldg-notes .desktop-text {
+		display:none;
+	}
+	.view-campus-wifi-building-status table.views-table td.views-field-field-bldg-notes .mobile-text {
+		display:inline;
+	}
+
+}
+
+/* Phone */
+@media screen and (max-width:524px) {
+	body {
+		margin:0;
+		background:#e5e5e5;
+		font-size:1.25em;
+	}
+	#page {
+		font-size:1em;
+	}
+	#node-1 {
+		font-size:1em;
+	}
+	#block-block-13 #canvas-holder {
+		float:none;
+		width:90%;
+		margin:0 auto 0 auto;
+	}
+	#block-block-13 ul.progress-legend {
+		margin:1em 0 1em 12px;
+	}
+	#block-block-13 .progress-note {
+		margin:0 0 0 10px;
+	}
+	#block-block-7 p {
+		display:none;
+	}
+	.imagezoom {
+		width:80%;
+	}
+	#building-filter input {
+		width:auto;
+		margin:0;
+		padding:5px;
+		-webkit-appearance:none;
+		-webkit-border-radius:0;
+		font-size:inherit;
+	}
+
+}

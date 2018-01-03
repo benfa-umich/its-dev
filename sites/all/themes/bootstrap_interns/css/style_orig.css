@@ -1,0 +1,597 @@
+/**
+ * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
+ * remove this comment and start adding your styles to this file.
+ */
+ /**
+ * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
+ * remove this comment and start adding your styles to this file.
+ */
+ 
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
+@import "https://fonts.googleapis.com/css?family=Lato:300,400,700";
+
+/* custom kjgaona */
+
+html,body {
+	/* Prevent scroll on narrow devices */
+	overflow-x:hidden;
+}
+
+body {
+	text-rendering:optimizeLegibility;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	font-family:'Open Sans', sans-serif;
+	background-color:#fcfcfc;
+	/*text-shadow: 0 1px 0 #fff;*/
+}
+
+#navbar {
+	opacity:.95;
+}
+
+.navbar-default {
+	background-color:#00274c;
+	border:none;
+}
+
+.navbar-default .navbar-nav>li>a,.navbar-default .navbar-nav>li>a:hover {
+	color:#fff;
+}
+
+.navbar-default .navbar-brand {
+	color:#fff;
+}
+
+ 
+
+/*.navbar-brand {
+	margin-top: 7px;
+	text-indent: -9999px;
+	width: 370px;
+	background: url('https://documentation.its.umich.edu/sites/all/themes/bootstrap/logo.png') no-repeat;
+}*/
+.navbar-brand:hover {
+	color:#fff!important;
+}
+.service-logo {
+	padding: 10px 0;
+}
+
+@media (max-width: 767px) {
+	.service-logo {
+		padding: 10px 0 10px 15px;
+	}
+}
+
+.well {
+	margin-top: 20px;	
+}
+
+.callout {
+	margin:20px 0;
+	padding:20px;
+	border-left:3px solid #eee;
+}
+
+.callout h3 {
+	margin-top:0;
+	margin-bottom:5px;
+}
+
+.callout p {
+	font-size:1.15em;
+}
+
+.callout-info {
+	background-color:#f4f8fa;
+	border-color:#5bc0de;
+}
+
+.callout-info h4 {
+	color:#5bc0de;
+}
+
+.content {
+	color:#333;
+	margin-bottom:1.25em;
+	font-family:'Open Sans',sans-serif;
+}
+.content h1 {
+	margin-top: 2em;
+}
+
+.content h2:not(:first-child) {
+	margin-top: 2.5em;
+}
+.node {
+	margin-bottom: 2.5em;
+}
+
+.content ol li, .content ul li {
+	font-family: 'Lato',sans-serif;
+	line-height:2em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.highlighter li:hover, .highlighter li:hover {
+	background-color: #fcf8e3 !important;
+}
+.list-striped > li:nth-of-type(odd) {
+   background-color: #f3f3f3;
+}
+.highlighter .highlight {
+   background-color: #fcf8e3 !important;	
+}
+
+.taxonomy-term-description .label {
+	font-weight: normal;
+	text-transform: uppercase;
+}
+.content ol img, .content ul img {
+	margin-bottom: 2em;	
+}
+
+.embed-responsive {
+	position:relative;
+	display:block;
+	height:0;
+	padding:0;
+	overflow:hidden;
+}
+
+.embed-responsive .embed-responsive-item,.embed-responsive embed,.embed-responsive iframe,.embed-responsive object,.embed-responsive video {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:100%;
+	border:0;
+}
+
+.embed-responsive-16by9 {
+	padding-bottom:56.25%;
+}
+
+.embed-responsive-4by3 {
+	padding-bottom:75%;
+}
+
+.field-name-field-doc-id,.field-name-field-doc-tags,.field-name-field-last-modified {
+	margin-top: 4em;
+	font-size:.8em;
+}
+
+footer img {
+	margin-bottom:40px;
+}
+
+footer p {
+	font-size:1em;
+	line-height:1.5em;
+}
+
+footer .fa {
+	color:#fff;
+	text-shadow:none;
+}	
+
+
+.node-readmore {
+	visibility: hidden;	
+}
+.node:not(:last-child) {
+	border-bottom: 1px solid #ccc;
+
+}
+
+/* By default it's not affixed in mobile views, so undo that */
+.bs-sidebar.affix {
+	position: static;
+}
+.bs-sidebar ol, .bs-sidebar ul {
+	border: none;
+}
+.bs-sidebar li {
+	font-family:'Open Sans',sans-serif !important;
+}
+/* First level of nav */
+.bs-sidenav {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-shadow: 0 1px 0 #fff;
+	background-color: #fcfcfc;
+	border-radius: 4px;
+	font-size: 0.9em;
+}
+/* All levels of nav */
+.bs-sidebar .nav > li > a {
+	display: block;
+	color: #716b7a;
+	/*padding: 5px 20px;*/
+	padding: 5px 0 5px 10px;
+}
+.bs-sidebar .nav > li > a:hover, .bs-sidebar .nav > li > a:focus {
+	text-decoration: none;
+	color: #428bca;
+	border-left: 3px solid #dbd8e0;
+}
+.bs-sidebar .nav > .active > a, .bs-sidebar .nav > .active:hover > a, .bs-sidebar .nav > .active:focus > a {
+	color: #00274c;
+	background-color: transparent;
+	border-left: 3px solid #ffcb05;
+}
+/* Nav: second level (shown on .active) */
+.bs-sidebar .nav .nav {
+	display: none; /* Hide by default, but at >768px, show it */
+	margin-bottom: 8px;
+}
+.bs-sidebar .nav .nav > li > a {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 30px;
+	font-size: 90%;
+}
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+	.bs-sidebar .nav > .active > ul {
+		display: block;
+	}
+	/* Widen the fixed sidebar */
+	.bs-sidebar.affix, .bs-sidebar.affix-bottom {
+		width: 213px;
+	}
+	.bs-sidebar.affix {
+		position: fixed; /* Undo the static from mobile first approach */
+		top: 125px;
+	}
+	.bs-sidebar.affix-bottom {
+		position: absolute; /* Undo the static from mobile first approach */
+	}
+	.bs-sidebar.affix-bottom .bs-sidenav, .bs-sidebar.affix .bs-sidenav {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+@media (min-width: 1200px) {
+	/* Widen the fixed sidebar again */
+	.bs-sidebar.affix-bottom, .bs-sidebar.affix {
+		width: 263px;
+	}
+}
+
+.back-to-top {
+	font-size: 0.75em;
+	padding: 5px 0 5px 10px;
+	color: #716b7a;
+}
+
+.label {
+	text-shadow: none;	
+}
+
+/* bs */
+small,
+.small {
+  font-size: 85%;
+}
+mark,
+.mark {
+  padding: .2em;
+  background-color: #fcf8e3;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.text-muted {
+  color: #777;
+}
+.text-primary {
+  color: #337ab7;
+}
+a.text-primary:hover {
+  color: #286090;
+}
+.text-success {
+  color: #3c763d;
+}
+a.text-success:hover {
+  color: #2b542c;
+}
+.text-info {
+  color: #31708f;
+}
+a.text-info:hover {
+  color: #245269;
+}
+.text-warning {
+  color: #8a6d3b;
+}
+a.text-warning:hover {
+  color: #66512c;
+}
+.text-danger {
+  color: #a94442;
+}
+a.text-danger:hover {
+  color: #843534;
+}
+.bg-primary {
+  color: #fff;
+  background-color: #337ab7;
+}
+a.bg-primary:hover {
+  background-color: #286090;
+}
+.bg-success {
+  background-color: #dff0d8;
+}
+a.bg-success:hover {
+  background-color: #c1e2b3;
+}
+.bg-info {
+  background-color: #d9edf7;
+}
+a.bg-info:hover {
+  background-color: #afd9ee;
+}
+.bg-warning {
+  background-color: #fcf8e3;
+}
+a.bg-warning:hover {
+  background-color: #f7ecb5;
+}
+.bg-danger {
+  background-color: #f2dede;
+}
+a.bg-danger:hover {
+  background-color: #e4b9b9;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888*/
+
+body { 
+	padding-top: 80px;
+	background: #555555;
+	color: #FFFFFF; 
+}
+.different-icon {
+	max-height: 8em;
+}
+.navbar {
+	height: 81px;
+	border: 0px;
+	background-color: #00274c;
+}
+
+.navbar-nav > li > a,
+.navbar-brand {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	color: #FFFFFF !important;
+	vertical-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif; 
+  text-align: center;
+  padding: 20px 0px;
+  font-weight: 700;
+}
+p, li {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.4em;
+	text-align: left;
+}
+.block-m {
+	max-height: 2.5em;
+}
+span {
+	padding: 5px;
+}
+h1 {
+	font-size: 40pt;
+}
+h2 {
+	font-size: 36pt;
+}
+#section-1,
+#section-2,
+#section-4,
+#section-6,
+#section-8 {
+	background-color: #366797;
+	padding: 1em;
+	padding-bottom: 2em;
+}
+#section-3,
+#section-5,
+#section-7,
+#section-9 {
+	background-color: #00274c;
+	padding: 1em;
+	padding-bottom: 2em;
+	text-align: center;
+}
+#footer {
+	background-color: #10110E;
+	padding: 1em;
+	padding-bottom: 2em;
+	text-align: center;
+}
+#footer > div > h4 {
+	font-weight: 400;
+	font-size: 12pt;
+}
+#footer > div > p {
+	font-weight: 400;
+	font-size: 10pt;
+	text-align: center;
+}
+.btn-facebook {
+  color: #ffffff;
+  background-color: #133783;
+  border-color: #133783;
+}
+
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+  color: #ffffff;
+  background-color: #0e285f;
+  border-color: #0b214e;
+}
+
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+  background-image: none;
+}
+
+.btn-facebook.disabled,
+.btn-facebook[disabled],
+fieldset[disabled] .btn-facebook,
+.btn-facebook.disabled:hover,
+.btn-facebook[disabled]:hover,
+fieldset[disabled] .btn-facebook:hover,
+.btn-facebook.disabled:focus,
+.btn-facebook[disabled]:focus,
+fieldset[disabled] .btn-facebook:focus,
+.btn-facebook.disabled:active,
+.btn-facebook[disabled]:active,
+fieldset[disabled] .btn-facebook:active,
+.btn-facebook.disabled.active,
+.btn-facebook[disabled].active,
+fieldset[disabled] .btn-facebook.active {
+  background-color: #133783;
+  border-color: #133783;
+}
+
+.btn-twitter {
+  color: #ffffff;
+  background-color: #2daddc;
+  border-color: #0271bf;
+}
+
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active,
+.btn-twitter.active,
+.open .dropdown-toggle.btn-twitter {
+  color: #ffffff;
+  background-color: #2095c0;
+  border-color: #014d82;
+}
+
+.btn-twitter:active,
+.btn-twitter.active,
+.open .dropdown-toggle.btn-twitter {
+  background-image: none;
+}
+
+.btn-twitter.disabled,
+.btn-twitter[disabled],
+fieldset[disabled] .btn-twitter,
+.btn-twitter.disabled:hover,
+.btn-twitter[disabled]:hover,
+fieldset[disabled] .btn-twitter:hover,
+.btn-twitter.disabled:focus,
+.btn-twitter[disabled]:focus,
+fieldset[disabled] .btn-twitter:focus,
+.btn-twitter.disabled:active,
+.btn-twitter[disabled]:active,
+fieldset[disabled] .btn-twitter:active,
+.btn-twitter.disabled.active,
+.btn-twitter[disabled].active,
+fieldset[disabled] .btn-twitter.active {
+  background-color: #2daddc;
+  border-color: #0271bf;
+}
+.btn-youtube {
+  color: #ffffff;
+  background-color: #cd332d;
+  border-color: #6e0610;
+}
+
+.btn-youtube:hover,
+.btn-youtube:focus,
+.btn-youtube:active,
+.btn-youtube.active,
+.open .dropdown-toggle.btn-youtube {
+  color: #ffffff;
+  background-color: #ac2b26;
+  border-color: #340308;
+}
+
+.btn-youtube:active,
+.btn-youtube.active,
+.open .dropdown-toggle.btn-youtube {
+  background-image: none;
+}
+
+.btn-youtube.disabled,
+.btn-youtube[disabled],
+fieldset[disabled] .btn-youtube,
+.btn-youtube.disabled:hover,
+.btn-youtube[disabled]:hover,
+fieldset[disabled] .btn-youtube:hover,
+.btn-youtube.disabled:focus,
+.btn-youtube[disabled]:focus,
+fieldset[disabled] .btn-youtube:focus,
+.btn-youtube.disabled:active,
+.btn-youtube[disabled]:active,
+fieldset[disabled] .btn-youtube:active,
+.btn-youtube.disabled.active,
+.btn-youtube[disabled].active,
+fieldset[disabled] .btn-youtube.active {
+  background-color: #cd332d;
+  border-color: #6e0610;
+}
+
+/*overrides overrides*/
+.container {}
+.main-container {background:#366797;}
+.row {}
+.col-sm-12 {padding-left:0;padding-right:0;color:#fff;}
+.submitted {color:#fff;}
+.node a {color:#fff;}
+.content {color:#fff;}
+.btn {color:#000 !important;}
+.region {padding-left:0;padding-right:15px;}

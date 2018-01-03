@@ -1,0 +1,1030 @@
+
+ * @file
+ * Layout Styling (DIV Positioning)
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout is based on the Zen Columns layout method.
+ *   http://drupal.org/node/201428
+ *
+ * Only CSS that affects the layout (positioning) of major elements should be
+ * listed here.  Such as:
+ *   display, position, float, clear, width, height, min-width, min-height
+ *   margin, border, padding, overflow
+ */
+
+
+/*
+ * Body
+ */
+body {
+	color:#333333;
+}
+
+h1 {
+	font-size:175%;
+	margin:0 0 .5em 0 !important;
+	color:#00274c;
+}
+h2 {
+	font-size:150%;
+	color:#40658f;
+}
+h3 {
+	font-size:125%;
+	color:#555555;
+}
+h4 {
+	font-size:100%;
+}
+
+p {
+	margin-top:0;
+}
+
+.clear {
+	clear:both;
+}
+
+/*
+ * Default Page Link Colors
+ */
+a:link {
+	color:#0000ff;
+}
+a:visited {
+	color:#9933cc;
+}
+a:hover {
+	color:#cc3300;
+}
+a:active {
+	color:#cc9933;
+}
+
+#page-wrapper,
+.region-bottom {
+  /*
+   * If you want to make the page a fixed width and centered in the viewport,
+   * this is the standards-compliant way to do that. See also the ie6.css file
+   * for the necessary IE5/IE6quirks hack to center a div.
+   */
+	width:920px;
+	margin:10px auto 0 auto;
+	padding:0;
+/*	padding:0 20px 0 20px;*/
+/*	background:#cc0000;*/
+}
+
+#page {
+}
+
+/*
+ * Header
+ */
+#header {
+	height:177px !important;
+}
+
+#header .section {
+}
+
+.region-header {
+}
+
+#block-block-1 {
+	padding:0 !important;
+}
+.mfa-project-banner {
+	background:#40658f url('/projects/mfauth/sites/all/themes/zen_services_crazy_banner/images/mfa-project-banner.png') 20px center no-repeat;
+	width:100%;
+	height:100px;
+	margin:0;
+	padding:0;
+	text-indent:-99998px;
+}
+
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {
+	position: relative;
+	margin:0;
+	/*padding-left:20px;*/
+	padding:20px;
+	/*only for while there's no navigation*/
+	/*padding-top: 27px;*/
+	/*IE-only - it needs the extra padding due to the shadows we're adding in page-backgrounds.css*/
+	/*padding-left:20px\9;*/
+}
+
+#main {
+}
+
+/*
+ * Content
+ */
+#content,
+.no-sidebars #content {
+  float: left; /* LTR */
+  width: 880px;
+  margin-left: 0; /* LTR */
+  margin-right: -880px; /* LTR */ /* Negative value of #content's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
+}
+
+.sidebar-first #content {
+  width: 650px;
+  margin-left: 200px; /* LTR */ /* The width of .region-sidebar-first. */
+  margin-right: -940px; /* LTR */ /* Negative value of #content's width + left margin. */
+}
+
+/*styles for when only the second sidebar exists:*/
+.sidebar-second #content {
+  width: 690px;
+  margin-left: 0; /* LTR */
+  margin-right: -690px; /* LTR */ /* Negative value of #content's width + left margin. */
+}
+
+.two-sidebars #content {
+  width: 500px;
+  margin-left: 180px; /* LTR */ /* The width of .region-sidebar-first */
+  margin-right: -680px; /* LTR */ /* Negative value of #content's width + left margin. */
+}
+
+#content .section {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Navigation
+ */
+#navigation {
+  float: left; /* LTR */
+  width: 100%;
+  margin-left: 0; /* LTR */
+  margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
+  padding: 0 !important; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
+  height: 40px; /* The navigation can have any arbritrary height. We picked one
+                    that is the line-height plus 1em: 1.3 + 1 = 2.3
+                    Set this to the same value as the margin-top below. */
+}
+
+.with-navigation #content,
+.with-navigation .region-sidebar-first,
+.with-navigation .region-sidebar-second {
+  margin-top: 40px; /* Set this to the same value as the navigation height above. */
+}
+
+#navigation .section {
+}
+
+/*
+ * First sidebar
+ */
+.region-sidebar-first {
+  float: left; /* LTR */
+  width: 160px;
+  margin-left: 0; /* LTR */
+  margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
+}
+
+.region-sidebar-first .section {
+  margin: 0 20px 0 0; /* LTR */
+  padding: 0;
+}
+
+/*sidebar fist nav*/
+.region-sidebar-first ul {padding:8px 0 0 0; margin:0;}
+.region-sidebar-first ul li {list-style-image:none;list-style:none;padding:6px 0 6px 6px;border-bottom:1px solid #CCC;}
+.region-sidebar-first li a {text-decoration:none;display:block;min-width:120px !important;}
+.region-sidebar-first li:hover {background-color:#eee;}
+/*
+ * Second sidebar
+ */
+.region-sidebar-second {
+  float: left; /* LTR */
+  width: 190px;
+  margin-left: 710px; /* LTR */ /* Width of content + sidebar-first. */
+  margin-right: -690px; /* LTR */ /* Negative value of .region-sidebar-second's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */
+}
+
+.region-sidebar-second .section {
+  margin: 0 0 0 20px; /* LTR */
+  padding: 0;
+}
+
+
+
+/*
+ * Footer
+ */
+.region-footer {
+	color:#ffffff;
+/*	background-color:#999999;*/
+	background:#333333;
+/*	border-top:5px solid #555555;*/
+	border-bottom:10px solid #ffffff;
+	margin:1.5em 10px 0 10px;
+	padding:1px 20px 20px 20px;
+	font-size:.9em;
+}
+.region-footer h3 {
+	font-size:inherit;
+}
+.region-footer ul {
+/*	list-style:none;*/
+	margin:0 0 0 10px;
+	padding:0 0 0 10px;
+}
+.region-footer a {
+	color:#ffffff;
+	text-decoration:none;
+}
+.region-footer a:hover {
+	color:#ffffff;
+	text-decoration:underline;
+}
+.region-footer table td {
+	padding:0 40px 0 0;
+	vertical-align:top;
+}
+.region-footer table td .socialmedia {
+	margin:2px 0 10px 0;
+}
+.region-footer table td .socialmedia a {
+	margin-right:5px;
+}
+
+
+/*
+ * Page bottom
+ */
+.region-bottom /* See also the #page-wrapper declaration above that this div shares. */ {
+}
+
+/*
+ * Prevent overflowing content
+ */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-footer,
+.region-bottom {
+  overflow: visible;
+  word-wrap: break-word; /* A very nice CSS3 property */
+}
+
+/*
+ * If a div.clearfix doesn't have any content after it and its bottom edge
+ * touches the bottom of the viewport, Firefox and Safari will mistakenly
+ * place several pixels worth of space between the bottom of the div and the
+ * bottom of the viewport. Uncomment this CSS property to fix this.
+ * Note: with some over-large content, this property might cause scrollbars
+ * to appear on the #page-wrapper div.
+ */
+/*
+#page-wrapper {
+  overflow-y: hidden;
+}
+*/
+
+.cke_panel_list {background-color:#FFF !important;}
+
+.ckeditor-mod {background-color:#FFF !important;}
+
+.cke_contents {background-color:#FFF !important;}
+
+.cke_show_borders {background-color:#FFF !important;}
+
+.CSS1Compat {background-color:#FFF !important;}
+
+
+.cke_panel_list body {background-color:#FFF !important;}
+
+.ckeditor-mod body {background-color:#FFF !important;}
+
+.cke_contents body {background-color:#FFF !important;}
+
+.cke_show_borders body {background-color:#FFF !important;}
+
+.CSS1Compat body {background-color:#FFF !important;}
+
+
+/* DOUGHB CSS */
+
+#search-block-form {
+	width:200px;
+	margin:20px 0 0 0;
+	padding:0;
+}
+#edit-search-block-form--2 {
+	margin:0;
+/*	padding:10px;*/
+	padding:0;
+}
+#edit-submit--2 {
+	/*background:#006600;*/
+/*	margin:0 10px 0 0;*/
+	margin:0;
+	
+}
+
+#site-slogan {
+	width:620px;
+	float:right;
+	text-align:right;
+	font-weight:bold;
+	color:#ffffff;
+	margin:55px 10px 0 0;
+	padding:0;
+	line-height:20px;
+}
+
+ul.get-help {
+	margin:0 !important;
+	padding:0 !important;
+	list-style:none;
+}
+ul.get-help li {
+	min-height:16px;
+/*	margin:0 0 .85em 0;*/
+	margin:0;
+	padding:0 0 0 20px;
+}
+ul.get-help li a {
+	display:block;
+}
+ul.get-help li.request {
+	background:#ffffff url('/sites/all/themes/zen_services/images/online-service-request.png') 0 .2em no-repeat;
+}
+ul.get-help li.email {
+	background:#ffffff url('/sites/all/themes/zen_services/images/icon-email.png') 0 .2em no-repeat;
+}
+ul.get-help li.phone {
+	background:#ffffff url('/sites/all/themes/zen_services/images/icon-phone.png') 0 .2em no-repeat;
+}
+ul.get-help li.docs {
+	background:#ffffff url('/sites/all/themes/zen_services/images/icon-documentation.png') 0 .2em no-repeat;
+}
+
+.field-name-field-service-status,
+.field-name-field-link-to-separate-site,
+.field-name-field-nonportal-web-app-link {
+	margin-bottom:1.5em;
+}
+
+.field-name-field-request-button-link {
+	margin-bottom:1.5em;
+	text-align:right;
+}
+.field-name-field-request-button-link a {
+	padding:.5em 1.25em .5em 1.25em;
+	text-decoration:none;
+	font-weight:bold;
+}
+.field-name-field-request-button-link a:link, .field-name-field-request-button-link a:visited {
+	border:1px solid #ffcc00;
+	background:#ffffcc;
+	color:#005596;
+}
+.field-name-field-request-button-link a:hover {
+	border:1px solid #005596;
+	background:#005596;
+	color:#ffffff;
+}
+.field-group-htab {
+	margin:0;
+	padding:0;
+	width:auto;
+}
+.field-collection-container,
+.field-item {
+	width:auto;
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+
+.views-table {
+	border-collapse:collapse;
+}
+.views-table th {
+	padding:10px;
+	background:#005596;
+	border-bottom:1px solid #cccccc;
+	color:#ffffff;
+}
+.views-table th a:link, .views-table th a:visited {
+	color:#ffcc00;
+}
+.views-table th a:hover, .views-table th a:active {
+	color:#bac9e1;
+}
+.views-table td {
+	padding:10px;
+	border-bottom:1px solid #cccccc;
+	vertical-align:top;
+	background:#f5f5f5;
+}
+td.active {
+	background:#dddddd;
+}
+.views-table td.views-field-title {
+	/*width:80%;*/
+}
+.views-table td.views-field-title a {
+	font-weight:bold;
+}
+.views-table td.views-field-field--service-categories {
+	width:20%;
+}
+.views-table td ul {
+	list-style:square;
+	margin:0 0 0 10px;
+	padding:0 0 0 10px;
+	white-space:nowrap;
+	line-height:normal;
+}
+
+.field-name-field-service-image {
+	float:left;
+	margin:0 20px 1.5em 0;
+}
+
+.carousel-intro {
+	text-indent: -9876px;
+	position: absolute;
+	z-index: -1;
+	overflow: hidden;
+	text-decoration: none;
+}
+
+
+/*sidebar styles for pages like https://it.umich.edu/initiatives/cloud/content/why-cloud-services */
+.sidebar h2 {
+  font-size:110%; 
+  color:#005596;
+  font-weight:bold; 
+  line-height:normal; 
+  margin: 0; 
+  padding: 0;
+}
+.sidebar ul {
+  margin:8px 0 0 5px;
+  padding-left:10px;
+}
+.sidebar li {
+  margin: 0 0 .1em 0;
+}
+
+/*text styles for the project statuses*/
+.Green {background-color:lime;background-color:#33cc00;padding:2px;}
+
+.Yellow {background-color:yellow;background-color:#ffcc00;padding:2px;}
+
+.Red {background-color:red;background-color:#eb0000;padding:2px;}
+/*styles for the possible asterisk text at the end of project statuses*/
+.views-field-field-status-ast-text {padding-top:8px;}
+
+/*REMOVE THE DOTS!!!*/
+
+/*zoomlinks for Shadowboxes*/
+.zoomlink {float:right;font-size:.8em;padding-right:30px;margin-bottom:10px;}
+
+.overviewlink {padding-right:150px;}
+
+.smalltext {
+	font-size:.85em;
+}
+
+/* STUDENT JOBS STYLES */
+.student-jobs-banner {
+	background:#00274c url('/building-the-build/sites/all/themes/zen_services_crazy_banner/images/student-jobs-sub-banner.png') left center no-repeat !important;
+	
+	height:60px;
+	margin-left:20px;
+	text-indent:-99998px;
+}
+
+/*end student jobs styles*/
+
+
+/* BUILDING-THE-BUILD BLOG STYLES */
+
+.building-the-build-banner {
+	background:#fff url('/building-the-build/sites/all/themes/zen_services_crazy_banner/images/building-the-build-banner.jpg') left center no-repeat !important;
+	width:100%;
+	height:100px;
+	text-indent:-99998px;
+}
+h2.node-title a {
+	display:block;
+	margin-bottom:.25em;
+	font-size:125%;
+}
+h2.node-title a:link, h2.node-title a:visited {
+	color:#00274c;
+	text-decoration:none;
+}
+h2.node-title a:hover {
+	color:#cc3300;
+	text-decoration:underline;
+}
+.submitted {
+	font-style:italic;
+	margin-bottom:.75em;
+}
+.field-name-field-tags {
+	margin-bottom:1em;
+	padding:10px;
+	background:#f5f5f5;
+}
+.field-name-field-tags .field-label {
+	display:inline;
+}
+.field-name-field-tags .field-item {
+	display:inline;
+	margin:0;
+}
+.field-name-field-tags .field-item::after {
+	content:", ";
+}
+.field-name-field-tags .field-item:last-of-type::after {
+	content:"";
+}
+ul.links.inline {
+	margin-top:0;
+	margin-left:0;
+	padding-left:0;
+}
+ul.links li {
+	margin:0;
+	padding:0 !important;
+}
+li.node-readmore a {
+/*	float:right;*/
+	display:block;
+	margin:0 0 1em 0;
+/*	padding:10px;
+	border:1px solid #cccccc;
+	-webkit-border-radius:3x;
+	border-radius:3px;*/
+}
+li.node-readmore a::after {
+	content:"...";
+}
+li.comment-new-comments a, li.comment-comments a {
+	margin-right:10px;
+	text-decoration:none;
+}
+li.comment-add a {
+	display:inline-block;
+	margin:1em 0 0 0;
+	padding:10px;
+	border:1px solid #cccccc;
+	-webkit-border-radius:3x;
+	border-radius:3px;
+}
+li.comment-add a:link, li.comment-add a:visited {
+	color:#333333;
+	text-decoration:none;
+}
+li.comment-add a:hover {
+	color:#cc3300;
+}
+.comment-wrapper {
+	margin-top:2em !important;
+}
+.comment {
+	padding-left:20px;
+	border-left:3px solid #cccccc;
+}
+h3.comment-title {
+	margin-bottom:0;
+}
+h3.comment-title a {
+	color:#00274c;
+	text-decoration:none;
+}
+li.comment-delete a, li.comment-edit a, li.comment-reply a {
+	display:inline-block;
+	margin:0;
+	padding:2px 6px;
+	border:1px solid #cccccc;
+	-webkit-border-radius:3x;
+	border-radius:3px;
+	text-decoration:none;
+}
+.indented .comment {
+	padding-left:20px;
+	border-left:3px solid #cccccc;
+}
+h2.title.comment-form {
+	margin-top:2em;
+}
+
+/* END BUILDING-THE-BUILD */
+
+
+
+/* CANVAS SITE STYLES */
+
+.canvas-banner {
+	background:#40658f url('/projects/canvas/sites/all/themes/zen_services_crazy_banner/images/canvas-banner.jpg') left center no-repeat !important;
+	width:100%;
+	height:100px;
+	text-indent:-99998px;
+}
+#navigation {
+	width:900px;
+	margin:-10px 0 0 -10px;
+	background-image:none !important;
+	background:#40658f !important;
+	color:#6189b7;
+}
+#navigation #main-menu {
+	margin-left:10px;
+}
+#navigation #main-menu li {
+	float:left;
+}
+#navigation #main-menu li a {
+	display:block;
+	padding:10px;
+	font-weight:bold;
+	text-decoration:none;
+	line-height:20px;
+}
+#navigation #main-menu li a:link, #navigation #main-menu li a:visited {
+	color:#ffffff;
+}
+#navigation #main-menu li a:hover {
+	background:#567daa;
+}
+.canvas-instructor-contacts {
+	width:100%;
+	margin:0 auto 0 auto;
+	border-collapse:collapse;
+}
+.canvas-instructor-contacts td {
+	width:50%;
+	padding:0 40px 0 0;
+	vertical-align:top;
+}
+.canvas-instructor-contacts td h3 {
+	margin:0 0 .25em 0;
+}
+.canvas-instructor-contacts td ul {
+	margin:0 0 1.75em 20px;
+	padding:0 0 0 20px;
+}
+.canvas-student-info {
+	float:left;
+	width:27%;
+	height:28em;
+	margin:0 2% 1.5em 0;
+	padding:0 2% 1em 2%;
+	background:#f0f3f8;
+}
+.canvas-student-info:nth-child(3n) {
+/*	background:#6189b7;*/
+}
+.canvas-terms {
+	margin:0 auto 0 auto;
+	border-collapse:collapse;
+}
+.canvas-terms th {
+	width:50%;
+	padding:10px;
+	background:#eff0f1;
+	border:1px solid #cccccc;
+	text-align:center;
+}
+.canvas-terms td {
+	padding:10px;
+	border:1px solid #cccccc;
+	text-align:center;
+}
+
+
+/* END CANVAS SITE STYLES */
+
+
+
+/* FAQ STYLES */
+
+.field-name-field-question, 
+.field-name-field-q, 
+.question, .open {
+	margin:1em 0 0 0;
+	padding:0 0 0 15px;
+	line-height:135%;
+}
+.field-name-field-question, 
+.field-name-field-q, 
+.question {
+	display:block;
+	color:#40658f;
+	background:transparent url("/projects/wifi-upgrade/sites/all/themes/zen_services_wifi/images/arrow-rt.png") no-repeat;
+	cursor:pointer;
+}
+.field-name-field-question:hover, 
+.field-name-field-q:hover, 
+.question:hover {
+	color:#cc3300;
+	text-decoration:underline;
+}
+.open {
+	background:transparent url("/projects/wifi-upgrade/sites/all/themes/zen_services_wifi/images/arrow-dn.png") no-repeat;
+	font-weight:bold;
+	color:#40658f;
+}
+.field-name-field-answer, 
+.field-name-field-a, 
+.answer {
+	margin:0;
+	padding:0 0 1em 15px;
+	line-height:135%;
+}
+.field-name-field-answer p, 
+.field-name-field-a p, 
+.answer p {
+	margin:1em 0 0 0;
+}
+
+/* END FAQ STYLES */
+
+.field-collection-view {
+  padding:0 !important;
+  margin:0 !important;
+  border-bottom:0 !important;
+}
+.field-collection-view-links {
+	display:none;
+}
+
+
+
+/*schleif edit - 3/26/15*/
+#block-formblock-application #edit-submit {
+		padding:10px 20px 10px 20px;
+		font-weight:bold;
+		font-size:1em;
+		border-radius:3px;
+		min-width:150px;
+}
+
+#datatable-1_paginate {display:none;visibility:hidden;}
+
+/*menu styles*/
+#main-wrapper {
+/*	padding-top:7px;
+	padding-left:10px;*/
+}
+#block-system-main-menu {}
+#block-system-main-menu .menu {  font-size: 1.25em;
+  font-family: Antonio,'Arial Narrow',Arial;
+  font-weight: normal;}
+#block-system-main-menu .menu li {display:inline-block;list-style:none;border-bottom:1px solid #dcdddf;/*border-right:1px solid #dcdddf;*/}
+#block-system-main-menu .menu li a {display:inline-block;padding:5px 0px 5px 0px;text-decoration:none;font-weight:bold;}
+#block-system-main-menu .menu li a:hover {text-decoration:underline;background:#eee;}
+#block-system-main-menu h2 {display:none;}
+
+/*for when there are repeating fieldgroups - they're the same grey #eee as the background by default - changing to very light grey */
+tr.odd {background-color: #fafafa;}
+
+/*datatables testing*/
+.dataTables_filter {float:none;text-align:left;padding-bottom:15px;}
+.field-collection-view .field-label {width:inherit;}
+.field-name-field-describe-your-customer-ser {padding-top:20px;}
+.views-exposed-form {background:#fafafa;}
+.comment_forbidden {display:none;visibility:hidden;}
+.group-generic-info {float:right;width:300px;border:1px solid #999;padding:15px;border-radius:2px;}
+/*end schleif edits*/
+
+
+/* MITIME SITE http://its.umich.edu/projects/umhs/mitime/ */
+.mitime-banner {
+	width:100%;
+	height:100px;
+	background:url('/projects/umhs/mitime/sites/all/themes/zen_services_crazy_banner/images/mitime-banner.jpg') no-repeat;
+	text-indent:-99999px;
+}
+
+
+/* FINANCIALS UPGRADE PROJECT SITE */
+
+.financials-upgrade-project-banner {
+	background:#40658f url('/projects/mfauth/sites/all/themes/zen_services_crazy_banner/images/financials-upgrade-project-banner.png') 20px center no-repeat;
+	width:100%;
+	height:100px;
+	margin:0;
+	padding:0;
+	text-indent:-99998px;
+}
+
+/* END FINANCIALS UPGRADE PROJECT SITE */
+
+
+/* TECHNICAL TRAINING SITE */
+
+.technical-training-banner {
+	background:#40658f url('/training/sites/all/themes/zen_services_crazy_banner/images/technical-training-banner.jpg') top center no-repeat;
+	width:100%;
+	height:100px;
+	margin:0;
+	padding:0;
+	text-indent:-99998px;
+}
+#block-views-exp-all-courses-page {
+	width:190px;
+	margin:0 20px 0 0;
+	padding:1em 20px 1em 10px;
+	background:#e5e5e5;
+	background:#f5f5f5;
+/*	border:1px solid #cccccc;*/
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+#block-views-exp-all-courses-page h2 {
+	margin:0 0 1em 0;
+	font-size:1.75em;
+	color:#00274c;
+}
+#block-views-exp-all-courses-page .views-exposed-form {
+	background:transparent;
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-exposed-widgets {
+	margin:0 !important;
+	padding:0 !important;
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-exposed-widget {
+	float:none !important;
+	margin:0 0 1em 0;
+	padding:0 !important;
+	font-size:1.25em;
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-exposed-widget label {
+	float:none !important;
+	margin:0 0 .5em 0;
+	padding:0 !important;
+	color:#40658f;
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-exposed-widget select {
+	width:100%;
+	margin:0 0 1em 0;
+	padding:0;
+	border:1px solid #cccccc;
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-exposed-widget select option {
+/*	padding:.25em;*/
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-exposed-widget select option:hover {
+	background:#ffffff;
+	cursor:pointer;
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-reset-button input[type=submit] {
+	float:none !important;
+	display:inline-block;
+	width:100%;
+	margin:0;
+	padding:.5em 2em .5em 2em;
+	border:0;
+	background:#40658f;
+	color:#ffffff;
+	-webkit-appearance:none;
+	text-shadow: 0 1px rgba(0,0,0,0.1);
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	font-size:inherit;
+	font-weight:bold;
+	text-align:center;
+	text-decoration:none;
+	white-space:nowrap;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	cursor:default;
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-reset-button input[type=submit]:hover {
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+	background:#567daa;
+}
+#block-views-front-page-news-block {
+	margin:0 0 2em 50px;
+	padding:20px;
+/*	background:#ffcb05;*/
+	border:1px solid #ffcb05;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+#block-views-front-page-news-block p {
+	margin-bottom:0;
+}
+#block-views-front-page-news-block h2 {
+	margin-top:0;
+	color:#00274c;
+}
+.view-all-courses {
+	width:100%;
+	margin-left:50px;
+}
+.view-all-courses .item-list ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.view-all-courses .item-list ul li {
+/*	clear:both;*/
+	float:left;
+	width:44%;
+	margin:1em 6% 2em 0;
+	padding:0;
+	overflow:auto;
+}
+.view-all-courses .item-list ul li:nth-child(2n) {
+/*	background:#ffcc00;*/
+}
+.view-all-courses .item-list ul li:nth-child(2n+1) {
+	clear:both;
+}
+.view-all-courses .item-list ul li h3 {
+	margin:0 0 .25em 0;
+	font-size:1.5em;
+	line-height:normal;
+}
+.view-all-courses .item-list ul li h3 a {
+	color:#666666;
+	text-decoration:none;
+}
+.views-field-field-vendor-link-1 {
+	margin:0 0 .5em 0;
+	font-size:.85em;
+}
+.views-field-field-course-description {
+	margin:0 0 .5em 0;
+}
+.views-field-field-um-or-vendor, 
+.views-field-field-cost, 
+.views-field-field-available-to, 
+.views-field-field-format, 
+.views-field-title-1 {
+	margin:0;
+	padding:.15em 10px .15em 10px;
+/*	border-right:1px solid #cccccc;
+	border-left:1px solid #cccccc;*/
+	background:#eff0f1;
+	background:#e5e5e5;
+	line-height:135%;
+}
+.views-field-field-um-or-vendor {
+	padding-top:.75em;
+/*	border-top:1px solid #cccccc;*/
+	-webkit-border-radius:10px 10px 0 0;
+	border-radius:10px 10px 0 0;
+}
+.views-field-title-1 {
+	padding:1em 10px 1.25em 10px;
+/*	border-bottom:1px solid #cccccc;*/
+	-webkit-border-radius:0 0 10px 10px;
+	border-radius:0 0 10px 10px;
+}
+.views-field-title-1 a {
+	display:inline-block;
+	line-height:normal;
+}
+.views-field-title-1 a:link, .views-field-title-1 a:visited {
+}
+.views-label-field-um-or-vendor, 
+.views-label-field-cost, 
+.views-label-field-available-to, 
+.views-label-field-format {
+	font-size:.85em;
+	font-style:normal;
+	font-weight:bold;
+	color:#666666;
+	text-transform:uppercase;
+}
+.views-field-field-um-or-vendor .field-content, 
+.views-field-field-cost .field-content, 
+.views-field-field-available-to .field-content, 
+.views-field-field-format .field-content {
+	display:inline;
+}
+
+/* END TECHNICAL TRAINING SITE */
+
+
+
+
+
+

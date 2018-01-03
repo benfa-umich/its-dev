@@ -1,0 +1,210 @@
+/* This is a custom css stylesheet */
+
+@font-face {
+   font-family: 'Steelfish';
+   font-style: normal;
+   font-weight: normal;
+   src: url(../../../webfonts/steelfish_rg-webfont.eot);
+   src: url(../../../webfonts/steelfish_rg-webfont.eot?) format('eot'),url(../../../webfonts/steelfish_rg-webfont.woff) format('woff');
+}
+@font-face {
+   font-family: 'Antonio Light';
+   font-style: normal;
+   font-weight: normal;
+   src: url(../../../webfonts/antonio-light-webfont.eot);
+   src: url(../../../webfonts/antonio-light-webfont.eot?) format('eot'),url(../../../webfonts/antonio-light-webfont.woff) format('woff');
+}
+@font-face {
+   font-family: 'Antonio';
+   font-style: normal;
+   font-weight: normal;
+   src: url(../../../webfonts/antonio-regular-webfont.eot);
+   src: url(../../../webfonts/antonio-regular-webfont.eot?) format('eot'),url(../../../webfonts/antonio-regular-webfont.woff) format('woff');
+}
+@font-face {
+   font-family: 'FontAwesome';
+   font-style: normal;
+   font-weight: normal;
+   src: url(../../../webfonts/font-awesome/fonts/fontawesome-webfont.eot);
+   src: url(../../../webfonts/font-awesome/fonts/fontawesome-webfont.eot?) format('eot'),url(../../../webfonts/font-awesome/fonts/fontawesome-webfont.woff) format('woff');
+}
+@import url('../../../webfonts/font-awesome/css/font-awesome.min.css');
+
+body {
+	background: #ffffff; font-size: 18px;
+	font-family: Calibri, 'Gill Sans', Arial, Verdana, sans-serif;
+
+
+}
+.blueback {
+	background:#00264d;
+	padding:20px;
+	color:#ffffff;
+	/*max-height:100px;*/
+}
+
+
+
+.highlight{
+	xbackground:#cc6600;
+	xbackground:#83B2A8;
+	background:#54867b;
+	padding:20px;
+	color:#ffffff;
+	/*max-height:100px;*/
+}
+
+
+.banner-img-responsive {
+	display: block;
+    max-width: 100%;
+    height: auto;
+	max-height:60px;
+}
+.feedback-img-responsive {
+	display: block;
+    max-width: 100%;
+    height: auto;
+	max-height:40px;
+}
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom:0;
+  /*margin-bottom: 20px;*/
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.text {
+	padding:15px;
+	max-width:1500px;
+	margin:0 auto;
+}
+.text-invis {
+	padding:0;
+	max-width:1500px;
+}
+a:link {
+   text-decoration: none;
+   color:#0d57aa;
+   /*font-weight:bold;*/
+}
+a:visited {
+   text-decoration: none;
+   color:#0d57aa;
+}
+a:hover {
+   text-decoration: none;
+   color:#3378C7;
+}
+a:active {
+   text-decoration: none;
+   color:#3378C7;
+}
+
+h1 {
+   color: #00274c; 
+   font-family: Antonio, 'Arial Narrow', Arial; font-weight: normal; 
+   line-height: 40px; 
+   font-size: 2.5em;
+   padding:0;
+   margin:0;
+   /*padding: 20px 10px 0;*/ 
+   /*margin: 10px 0 0;*/
+}
+
+h2 {
+   color: #655a52;
+   font-family: Antonio, 'Arial Narrow', Arial; 
+   font-weight: normal; 
+   line-height: 30px; 
+   xfont-size: 2em; 
+   /*padding: 17px 17px;*/ 
+   border: 0; margin: 0 0 15px 0;
+}
+h2.content {
+	padding-top: 20px;
+}
+h3,
+h3.priority {
+	xfont-weight:bold;
+	display:inline;
+	xfont-size:120%;
+	line-height:100%;
+	margin:20px 0 8px 0;
+	xcolor:#587abc;
+	font-family: 'Arial Narrow', Arial; 
+	font-weight: bolder;
+	xcolor: #CC6600;
+    color: #40658f; 
+  
+}
+h3.list {
+   xcolor: #00274c; 
+   xfont-family: Antonio, 'Arial Narrow', Arial; 
+   xfont-weight: normal; 
+   line-height: 35px; 
+   xfont-size: 1.5em; 
+   margin: 14px 0 10px 0;   
+}
+h4.list {
+   color: #655a52; 
+   font-family: xAntonio, 'Arial Narrow', Arial; 
+   font-weight: bolder; 
+   line-height: 1.3em; 
+   xfont-size: 1.2em; 
+   margin: 12px 0 6px 0;   
+}
+
+
+
+.inline {
+	display:inline; 
+	line-height:100%;
+}
+.tactic {
+	border-top: 1px solid #cc6600;
+	margin:10px 0 20px 5%;
+}
+.roundBox {
+xbackground-color: #eeeeee;
+background-color:#EFF0F1;
+xborder:2px solid #ccc;
+padding: 5px 15px;
+margin-bottom: 20px;
+margin-left:10px;
+border-radius:8px;
+}
+
+a {
+   color: inherit;
+}
+.summaryline {
+font-size:2.2em;
+line-height:1.5em;
+color:#ffffff;
+margin:2em 0;
+xfont-family:"Times New Roman", Times, serif;
+font-family: "Arial Narrow",Arial,sans-serif
+
+
+
+}
+.footer {
+	font-family: Antonio, 'Arial Narrow', Arial;
+    font-size: 1.2em;
+}
+
+.screenreadertext{
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;}
+
+.domain-box{
+	background:#f5f5f5;
+	margin: 1em 10px 1em 0;
+	padding:5px;}

@@ -1,0 +1,628 @@
+/**
+ * @file
+ * Layout Styling (DIV Positioning)
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout is based on the Zen Columns layout method.
+ *   http://drupal.org/node/201428
+ *
+ * Only CSS that affects the layout (positioning) of major elements should be
+ * listed here.  Such as:
+ *   display, position, float, clear, width, height, min-width, min-height
+ *   margin, border, padding, overflow
+ */
+
+@font-face {
+	font-family:'Antonio';
+	font-style:normal;
+	font-weight:normal;
+	src:url(/webfonts/antonio-regular-webfont.eot);
+	src:url(/webfonts/antonio-regular-webfont.eot?) format('eot'),url(/webfonts/antonio-regular-webfont.woff) format('woff');
+}
+
+/*
+ * Body
+ */
+body {
+}
+
+#page-wrapper,
+.region-bottom {
+  min-width: 960px; /* Don't allow the browser to make the site unreadable. */
+}
+
+#page {
+}
+
+/*
+ * Header
+ */
+#header {
+}
+
+#header .section {
+}
+
+.region-header {
+}
+
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {
+  position: relative;
+}
+
+#main {
+}
+
+/*
+ * Content
+ */
+#content {
+  float: left; /* LTR */
+  width: 100%;
+  margin-left: 0; /* LTR */
+  margin-right: -100%; /* LTR */ /* Negative value of #content's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
+}
+
+#content .section,
+.no-sidebars #content .section {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-first #content .section {
+  padding-left: 200px; /* LTR */ /* The width + left margin of .region-sidebar-first. */
+  padding-right: 0; /* LTR */
+}
+
+.sidebar-second #content .section {
+  padding-left: 0; /* LTR */
+  padding-right: 200px; /* LTR */ /* The width + right margin of .region-sidebar-second. */
+}
+
+.two-sidebars #content .section {
+  padding-left: 200px; /* The width + left margin of .region-sidebar-first. */
+  padding-right: 200px; /* The width + right margin of .region-sidebar-second. */
+}
+
+/*
+ * Navigation
+ */
+#Xnavigation {
+  float: left; /* LTR */
+  width: 100%;
+  margin-left: 0; /* LTR */
+  margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
+  height: 3em; /* The navigation can have any arbritrary height. We picked one
+                    that is the line-height plus 1em: 1.3 + 1 = 2.3
+                    Set this to the same value as the margin-top below. */
+}
+
+.with-navigation #content,
+.with-navigation .region-sidebar-first,
+.with-navigation .region-sidebar-second {
+  margin-top: 3em; /* Set this to the same value as the navigation height above. */
+}
+
+#navigation .section {
+}
+
+/*
+ * First sidebar
+ */
+.region-sidebar-first {
+  float: left; /* LTR */
+  width: 200px;
+  margin-left: 0; /* LTR */
+  margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
+}
+
+.region-sidebar-first .section {
+  margin: 0 20px 0 0; /* LTR */
+  padding: 0;
+}
+
+/*
+ * Second sidebar
+ */
+.region-sidebar-second {
+  float: right; /* LTR */
+  width: 200px;
+  margin-left: -200px; /* LTR */ /* Negative value of .region-sidebar-second's width + right margin. */
+  margin-right: 0; /* LTR */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */
+}
+
+.region-sidebar-second .section {
+  margin: 0 0 0 20px; /* LTR */
+  padding: 0;
+}
+
+/*
+ * Footer
+ */
+.region-footer {
+	margin:2em 10px 0 10px;
+	padding:20px;
+/*	background:#333333;*/
+	border-top:1px solid #cccccc;
+	overflow:auto;
+	font-size:.85em;
+	line-height:135%;min-height: 90px;
+}
+.region-footer p {
+	margin:0;
+}
+.region-footer .links {
+	float:left;
+	margin:0 35px 1.5em 0;
+}
+.region-footer .links ul {
+	margin:3px 0 0 10px;
+	padding:0 0 0 10px;
+	list-style:square;
+}
+.region-footer .links ul li {
+	margin-top:2px;
+}
+.region-footer .links .socialmedia {
+	margin:3px 0 10px 0;
+}
+.region-footer .links a {
+	margin-right:5px;
+}
+.region-footer a:link, .region-footer a:visited {
+	color:#40658f;
+	text-decoration:none;
+}
+
+.copyright {
+	clear:both;
+	color:#999999;
+}
+
+/*
+ * Page bottom
+ */
+.region-bottom /* See also the #page-wrapper declaration above that this div shares. */ {
+}
+
+/*
+ * Prevent overflowing content
+ */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-footer,
+.region-bottom {
+  overflow: visible;
+  word-wrap: break-word; /* A very nice CSS3 property */
+}
+
+/*
+ * If a div.clearfix doesn't have any content after it and its bottom edge
+ * touches the bottom of the viewport, Firefox and Safari will mistakenly
+ * place several pixels worth of space between the bottom of the div and the
+ * bottom of the viewport. Uncomment this CSS property to fix this.
+ * Note: with some over-large content, this property might cause scrollbars
+ * to appear on the #page-wrapper div.
+ */
+/*
+#page-wrapper {
+  overflow-y: hidden;
+}
+*/
+
+
+
+
+/* TECHNICAL TRAINING SITE */
+
+.technical-training-banner {
+	background:#40658f url('/training/sites/all/themes/zen_services_training/images/training-banner-bg.jpg') center center no-repeat;
+	width:100%;
+	height:100px;
+	margin:0;
+	padding:0;
+	text-indent:-99998px;
+}
+
+h1 {
+	margin:10px 0 .5em 0;
+	font-size:2.75em;
+	font-family:Antonio,'Arial Narrow',Arial;
+	font-weight:normal;
+	color:#00274c;
+	text-transform:uppercase;
+	letter-spacing:-.025em;
+	line-height:1.2em;
+}
+h2 {
+	margin:.75em 0 .5em 0;
+	font-size:2em;
+	font-family:Antonio,'Arial Narrow',Arial;
+	font-weight:normal;
+	color:#40658f;
+	text-transform:uppercase;
+	letter-spacing:-.025em;
+	line-height:1.2em;
+}
+
+.view-all-courses .item-list {
+	overflow:auto;
+}
+.view-all-courses .view-footer {
+	clear:both;
+}
+
+.indent {
+	margin-left:40px;
+}
+
+#block-views-exp-all-courses-page {
+	width:190px;
+	margin:0 20px 0 0;
+	padding:1em 20px .5em 20px;
+	background:#e5e5e5;
+	background:#f5f5f5;
+/*	border:1px solid #cccccc;*/
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+#block-views-exp-all-courses-page h2 {
+	margin:.25em 0 1em 0;
+	color:#00274c;
+}
+
+fieldset, fieldset legend {
+	width:100%;
+	margin:0 !important;
+	padding:0 !important;
+	border:0 !important;
+}
+.fieldset-legend span.summary {
+	margin:0;
+}
+html.js fieldset.collapsed .fieldset-legend {
+	width:100%;
+	background-image:url('/training/sites/all/themes/zen_services_training/images/training-arrow-rt.png') !important;
+	background-position:top left;
+	background-repeat:no-repeat;
+	margin:0;
+	padding:0 0 0 20px !important;
+}
+html.js fieldset.collapsible .fieldset-legend {
+	width:100%;
+	background-image:url('/training/sites/all/themes/zen_services_training/images/training-arrow-dn.png');
+	background-position:top left;
+	background-repeat:no-repeat;
+	margin:0;
+	padding:0 0 0 20px !important;
+}
+html.js fieldset.collapsed .fieldset-legend a, 
+html.js fieldset.collapsible .fieldset-legend a {
+	width:100%;
+	font-weight:bold;
+	color:#555555;
+	text-decoration:none;
+}
+.bef-select-as-checkboxes {
+	width:100%;
+	margin:.5em 0 1em 0;
+}
+.bef-select-as-checkboxes .form-type-bef-checkbox {
+	width:100%;
+	margin:0;
+	padding:0;
+	font-size:.8em;
+/*	white-space:nowrap;*/
+	overflow:hidden;
+}
+.fieldset-wrapper {
+	width:190px;
+}
+
+#block-views-exp-all-courses-page .views-exposed-form {
+	background:transparent;
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-exposed-widgets {
+	margin:0 !important;
+	padding:0 !important;
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-exposed-widget {
+	float:none !important;
+	margin:0 0 1em 0;
+	padding:0 !important;
+	font-size:1.25em;
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-exposed-widget label {
+	float:none !important;
+	margin:0 0 .5em 0;
+	padding:0 !important;
+	color:#555555;
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-exposed-widget select {
+	width:100%;
+	margin:0 0 1em 0;
+	padding:0;
+	border:1px solid #cccccc;
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-exposed-widget select option {
+/*	padding:.25em;*/
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-exposed-widget select option:hover {
+	background:#ffffff;
+	cursor:pointer;
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-reset-button input[type=submit] {
+	float:none !important;
+	display:inline-block;
+	width:100%;
+	margin:0;
+	padding:.5em 2em .5em 2em;
+	border:0;
+	background:#40658f;
+	color:#ffffff;
+	-webkit-appearance:none;
+	text-shadow: 0 1px rgba(0,0,0,0.1);
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	font-size:inherit;
+	font-weight:bold;
+	text-align:center;
+	text-decoration:none;
+	white-space:nowrap;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	cursor:default;
+}
+#block-views-exp-all-courses-page .views-exposed-form .views-reset-button input[type=submit]:hover {
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+	background:#567daa;
+	cursor:pointer;
+}
+#block-views-front-page-news-block {
+	margin:0 0 2em 0px;
+	padding:20px;
+/*	background:#ffcb05;*/
+	border:1px solid #ffcb05;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+
+#block-views-front-page-news-block h2 {
+	margin-top:0;
+	color:#40658f;
+}
+#block-views-front-page-news-block h3 {
+	margin-bottom:0px;
+}
+.view-all-courses {
+	clear:both;
+	width:100%;
+	/*margin-left:60px;*/
+}
+.view-all-courses .item-list ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.view-all-courses .item-list ul li {
+/*	clear:both;*/
+	float:left;
+	width:44%;
+	margin:1em 4% 2em 0;
+	padding:0;
+	overflow:auto;
+}
+.view-all-courses .item-list ul li:nth-child(2n) {
+/*	background:#ffcc00;*/
+}
+.view-all-courses .item-list ul li:nth-child(2n+1) {
+	clear:both;
+}
+.view-all-courses .item-list ul li h3 {
+	margin:0 0 .25em 0;
+	font-size:1.5em;
+	color:#40658f;
+	line-height:normal;
+}
+.view-all-courses .item-list ul li h3 a {
+	color:#40658f;
+	text-decoration:none;
+}
+.views-field-field-vendor-link-1 {
+	margin:0 0 .5em 0;
+	font-size:.85em;
+}
+.views-field-field-course-description {
+	margin:0 0 .5em 0;
+}
+.views-field-field-um-or-vendor, 
+.views-field-field-cost, 
+.views-field-field-rate-card, 
+.views-field-field-available-to, 
+.views-field-field-location, 
+.views-field-field-format, 
+.views-field-title-1 {
+	margin:0;
+	padding:.15em 10px .15em 10px;
+/*	border-right:1px solid #cccccc;
+	border-left:1px solid #cccccc;*/
+	background:#eff0f1;
+	background:#e5e5e5;
+	line-height:135%;
+}
+.views-field-field-um-or-vendor {
+	padding-top:.75em;
+/*	border-top:1px solid #cccccc;*/
+	-webkit-border-radius:10px 10px 0 0;
+	border-radius:10px 10px 0 0;
+}
+.views-field-title-1 {
+	padding:1em 10px 1.25em 10px;
+/*	border-bottom:1px solid #cccccc;*/
+	-webkit-border-radius:0 0 10px 10px;
+	border-radius:0 0 10px 10px;
+}
+.views-field-title-1 a {
+	display:inline-block;
+	line-height:normal;
+}
+.views-field-title-1 a:link, .views-field-title-1 a:visited {
+}
+.views-label-field-um-or-vendor, 
+.views-label-field-cost, 
+.views-label-field-rate-card, 
+.views-label-field-available-to, 
+.views-label-field-location, 
+.views-label-field-format {
+	font-size:.85em;
+	font-style:normal;
+	font-weight:bold;
+	color:#666666;
+	text-transform:uppercase;
+}
+.views-field-field-um-or-vendor .field-content, 
+.views-field-field-cost .field-content, 
+.views-field-field-rate-card .field-content, 
+.views-field-field-available-to .field-content, 
+.views-field-field-location .field-content, 
+.views-field-field-format .field-content {
+	display:inline;
+}
+
+/* END TECHNICAL TRAINING SITE */
+
+
+
+
+
+
+/*datatable style fixes*/
+.dataTables_info {display:none;}
+.dataTables_filter {float:none;text-align:left;margin: 1em auto 2em .5em;}
+table.display thead th {cursor:default;}
+tr.odd td.sorting_1 {background-color:transparent;} 
+tr.even td.sorting_1 {background-color:transparent;}
+.dataTables_wrapper tr.odd {background-color:#f4f3f2}
+#block-views-e1e8efc665cc6530ebe20834ac67af29 .block-title {margin-top:1em;}
+.view-all-its-comm-project-managers-executive-contacts table.display {width:auto;margin:0;}
+.sorting_asc {background-color:#00274c;color:#fff;}
+.sorting_desc {background-color:#00274c;color:#fff;}
+.sorting {background-color:#00274c;color:#fff;}
+.sorting_disabled {background-color:#00274c;color:#fff;}
+.dataTable th {border-right:1px solid #fff;}
+/*end datatable style fixes*/
+.text-center {width:100%;text-align:center;}
+.col-md-4 {    
+	float: left;
+    width: 29%;
+    display: inline-block;
+    margin-right: 12px;
+    margin-left: 12px;}
+.upcoming {margin-right:0;margin-left:20px;}
+
+#it4u-links {
+	margin: 0;	
+}
+/*.btn-register a {margin-top:35px;}*/
+#it4u-links h2 {
+	color: #00274c;	
+}
+#it4u-links .fa {
+	transform: rotate(7deg);
+	color: #00274c;
+}
+
+.clear {clear:both;}
+
+.btn:visited {text-decoration:none !important;}
+
+.btn-maize {
+    background-color: #ffcb05;
+    border-color: #F0C000;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+	text-decoration:none !important;
+}
+
+.frontpagemylinc {
+    float: left;
+    width: 44%;
+    margin: 1em 3% 2em 0;
+    padding: 12px;
+    overflow: auto;
+	border:1px solid #ccc;
+	border-radius:4px;
+}
+
+.frontpagemylinc h3 {margin-top:0;}
+
+#block-views-mylinc-courses-front-page-block {
+	width:100%;
+	/*margin-left:60px;*/
+}
+
+.front #main-wrapper {
+    padding-top:0;
+}
+
+.front #navigation {
+  
+   background: none !important;
+	/*display:none;*/
+}
+
+.bef-checkboxes label {font-size:12px !important;}
+
+.front h1 {margin-bottom:0;}
+
+.pager li {   
+	color: #ffffff;
+    cursor: default;
+    background-color: #fff;
+    border-color: #428bca;
+	border-radius:3px;
+	padding:0;
+}
+
+.pager-current {   padding:7px !important;margin:0 !important;font-size:13px;
+}
+.pager-current {background-color:#428bca !important;}
+
+.item-list .pager a {   padding:7px !important;margin:0 !important;font-size:13px;    border: 1px solid #ccc;
+	border-radius:3px; text-decoration:none;
+}
